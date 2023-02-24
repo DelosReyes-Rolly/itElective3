@@ -23,7 +23,12 @@
                     <br><br>
                     <form method="POST" action="{{ route('login') }}">
                         @csrf
-
+                        @if ($message = Session::get('message'))
+                            <div class="alert alert-danger alert-block">
+                                <button type="button" class="close" data-dismiss="alert">×</button>
+                                <strong>{{ $message }}</strong>
+                            </div>
+                        @endif
                         <div class="form-group">
                             <label for="email">{{ __('Email Address') }}</label>
                             <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
