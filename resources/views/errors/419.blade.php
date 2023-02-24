@@ -687,7 +687,7 @@
         <article>
             <p>Sorry! You're session has expired.</p>
             <p>Don't double click the logout button.</p>
-            <button><a href='{{ url("logins") }}'>Let me login!</a></button>
+            <button><a href='{{ url("login") }}'>Let me login!</a></button>
         </article>
     </div>
 
