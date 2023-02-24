@@ -13,7 +13,7 @@
 						<div style="box-shadow: 0 4px 16px rgba(0,0,0,1);">		
 								<div class="row">
 									<div class="col-md-3 border-right">
-									    <div class="d-flex flex-column align-items-center text-center p-3 py-5"><img class="rounded-circle mt-5" width="150px" src="{{ URL::asset('img/shs.png')}}"><br>
+									    <div class="d-flex flex-column align-items-center text-center p-3 py-5"><img class="rounded-circle mt-5" width="150px" src="{{ URL::asset('img/ocsr.png')}}"><br>
 									    	<span class="font-weight-bold"> {{Auth::user()->first_name}} {{Auth::user()->middle_name}} {{Auth::user()->last_name}} </span><span class="text-black-50"><br>Administrator</span><span> </span></div>
 									</div>
 									<div class="col-md-5 border-right">

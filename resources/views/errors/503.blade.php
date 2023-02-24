@@ -200,7 +200,7 @@
         }
     </style>
     <title>Under Maintenance</title>
-    <link rel="shortcut icon" type="image/icon" href='{{ URL::asset("img/shs.png")}}'/>
+    <link rel="shortcut icon" type="image/icon" href='{{ URL::asset("img/ocsr.png")}}'/>
 </head>
 <body>
 <main>

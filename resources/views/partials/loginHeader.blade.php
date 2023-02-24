@@ -14,7 +14,7 @@
         <title>OCSR</title>
 
         <!-- For favicon png -->
-		<link rel="shortcut icon" type="image/icon" href='{{ URL::asset("img/shs.png")}}'/>
+		<link rel="shortcut icon" type="image/icon" href='{{ URL::asset("img/ocsr.png")}}'/>
 
 		<!--animate.css-->
         <link rel="stylesheet" href="{{ asset('assets/css/animate.css') }}">

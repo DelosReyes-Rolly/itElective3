@@ -8,7 +8,7 @@
                 <div class="left">
                     <div class="overlay">
                         <center>
-                            <img src='{{ URL::asset("img/shs.png")}}'>
+                            <img src='{{ URL::asset("img/ocsr.png")}}'>
                             <h6>ONLINE COURSE <br>REGISTRATION</h6>
                         </center>
                     </div>
@@ -16,7 +16,7 @@
                 <div class="right">
                     <div class="right-logo">
                         <center>
-                            <img src='{{ URL::asset("img/shs.png")}}'><br/><br/>
+                            <img src='{{ URL::asset("img/ocsr.png")}}'><br/><br/>
                         </center>
                     </div>
                     <div class="card-header" style="background-color: #1c8a43; color:white; text-align:center; border-radius:10px; font-weight:bold; font-family: arial black"> {{ isset($url) ? ucwords($url) : ""}} {{ __('Login') }}</div>

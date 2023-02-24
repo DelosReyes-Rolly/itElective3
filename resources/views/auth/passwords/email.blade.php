@@ -6,7 +6,7 @@
     <div class="left">
         <div class="overlay">
             <center>
-                <img src='{{ URL::asset("img/shs.png")}}'>
+                <img src='{{ URL::asset("img/ocsr.png")}}'>
                 <h6>ONLINE COURSE <br>REGISTRATION</h6> 
             </center>
         </div>

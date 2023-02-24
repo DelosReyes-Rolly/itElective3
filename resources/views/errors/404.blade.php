@@ -669,7 +669,7 @@
 
             </style>
         <title>Page not found - 404</title>
-        <link rel="shortcut icon" type="image/icon" href='{{ URL::asset("img/shs.png")}}'/>
+        <link rel="shortcut icon" type="image/icon" href='{{ URL::asset("img/ocsr.png")}}'/>
         
     </head>
     <body>   

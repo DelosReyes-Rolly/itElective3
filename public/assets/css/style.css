@@ -214,7 +214,7 @@ nav.navbar.bootsnav .navbar-toggle i{color: #f3dc60;}
     align-items: center;
     justify-content: center;
     position:relative;
-    /* background:url(../../img/svnhs.jpg)no-repeat; */
+    /* background:url(../../img/landingBackground.jpg)no-repeat; */
     background-size:cover;
     background-position: center;
     height:890px;
@@ -656,7 +656,7 @@ nav.navbar.bootsnav .navbar-toggle i{color: #f3dc60;}
     align-items: center;
     justify-content: center;
     position:relative;
-    background:url(../../img/svnhs.jpg)no-repeat;
+    background:url(../../img/landingBackground.jpg)no-repeat;
     background-size:cover;
     background-position: center;
     height:1000px;
@@ -676,7 +676,7 @@ nav.navbar.bootsnav .navbar-toggle i{color: #f3dc60;}
   align-items: center;
   justify-content: center;
   position:relative;
-  background:url(../../img/svnhs.jpg)no-repeat;
+  background:url(../../img/landingBackground.jpg)no-repeat;
   background-size:cover;
   background-position: center;
   height: 1600px;
@@ -1487,7 +1487,7 @@ button[type=submit]{       /*login button*/
   align-items: center;
   justify-content: center;
   position:relative;
-  background:url(../../img/svnhs.jpg)no-repeat;
+  background:url(../../img/landingBackground.jpg)no-repeat;
   background-size:cover;
   background-position: center;
   height:200px;

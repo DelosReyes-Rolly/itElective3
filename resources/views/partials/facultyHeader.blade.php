@@ -20,8 +20,8 @@
     <script src="{{ asset('assets/js/sweetalert-new.js') }}"></script>
         
         <!-- title of site -->
-        <title>SVNHS-SHS BOARD</title>
-        <link rel="shortcut icon" type="image/icon" href='{{ URL::asset("img/shs.png")}}'/>
+        <title>OCSR</title>
+        <link rel="shortcut icon" type="image/icon" href='{{ URL::asset("img/ocsr.png")}}'/>
 
         <!--style.css-->
     <!-- Our Custom CSS -->
@@ -45,8 +45,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"/>
     <!-- <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script> -->
         <!-- title of site -->
-        <title>SVNHS-SHS BOARD</title>
-        <link rel="shortcut icon" type="image/icon" href='{{ URL::asset("img/shs.png")}}'/>
+        <title>OCSR</title>
+        <link rel="shortcut icon" type="image/icon" href='{{ URL::asset("img/ocsr.png")}}'/>
 
         <!--style.css-->
         <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}">
@@ -59,8 +59,8 @@
         <!-- Sidebar  -->
         <nav id="sidebar" class="sticky-top h-100 vh-100" style="box-shadow: 0 4px 16px rgba(0,0,0,0.4);">
             <div class="sidebar-header">
-            <div class="title" style="text-shadow: 0 4px 16px rgba(0,0,0,1);"><img src="{{url('/img/svnhs-logo.png')}}" style="width: 80px; height: 80px;"><img src="{{url('/img/shs.png')}}" style="width: 80px; height: 80px;"><div style="font-size: 20px;"> Online Course Subject Registration </div> <br/> OCSR</div>
-                <strong> <img src="{{url('/img/shs.png')}}" style="width: auto; height: auto;"></strong>
+            <div class="title" style="text-shadow: 0 4px 16px rgba(0,0,0,1);"><img src="{{url('/img/svnhs-logo.png')}}" style="width: 80px; height: 80px;"><img src="{{url('/img/ocsr.png')}}" style="width: 80px; height: 80px;"><div style="font-size: 20px;"> Online Course Subject Registration </div> <br/> OCSR</div>
+                <strong> <img src="{{url('/img/ocsr.png')}}" style="width: auto; height: auto;"></strong>
             </div>
 
             <ul class="list-unstyled components">

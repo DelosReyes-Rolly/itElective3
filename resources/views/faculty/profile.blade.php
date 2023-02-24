@@ -25,7 +25,7 @@
 						@elseif(Auth::user()->gender == "Female")
 							src="{{ URL::asset('img/profile-female.png')}}"><br>
 						@elseif(Auth::user()->gender == "Others")
-							src="{{ URL::asset('img/shs.png')}}"><br>
+							src="{{ URL::asset('img/ocsr.png')}}"><br>
 						@else
 							src="{{ URL::asset('img/svnhs-logo.png')}}"><br>
 						@endif
