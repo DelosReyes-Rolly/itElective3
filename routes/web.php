@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\FacultyController;
 
 /*
 |--------------------------------------------------------------------------
@@ -22,15 +23,23 @@ Route::get('/', function () {
 });
 
 Route::group(['middleware' => 'is_admin'], function () {
-    Route::controller(HomeController::class)->group(function(){
-        Route::get('admin/home', 'adminHome')->name('admin.home');
-    });
 
     Route::controller(AdminController::class)->group(function(){
+        
+        Route::get('admin/home', 'adminHome')->name('admin.home');
         Route::get('admin/profile', 'profile')->name('admin.profile');
     });
+
 });
 
 Auth::routes();
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-Route::get('faculty/profile', [App\Http\Controllers\FacultyController::class, 'profile'])->name('faculty.profile');
+
+Route::group(['middleware' => 'is_faculty'], function () {
+
+    Route::controller(FacultyController::class)->group(function(){
+
+        Route::get('/home', 'index')->name('home');
+        Route::get('faculty/profile', 'profile')->name('faculty.profile');
+
+    });
+});
