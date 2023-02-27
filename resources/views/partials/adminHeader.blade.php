@@ -6,9 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-    <!-- Bootstrap CSS CDN -->
-    <link rel="stylesheet" type="text/css"  href="{{ asset('assets/css/bootstrap-4.1.0-min.css') }}">
-    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous"> -->
+    {{-- Bootstrap --}}
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    
     <!-- Our Custom CSS -->
 	<link rel="stylesheet" type="text/css" href="{{ asset('assets/css/style4.css') }}">
     
@@ -22,12 +22,18 @@
     <script src="{{ asset('assets/js/sweetalert-new.js') }}"></script>
     
         <!-- title of site -->
-        <title>OCSR</title>
+        <title>Online Course Subject Registration</title>
         <link rel="shortcut icon" type="image/icon" href='{{ URL::asset("img/ocsr.png")}}'/>
 
         <!--style.css-->
         <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}">
 </head>
+
+<style>
+    a{
+        text-decoration:none;
+    }
+</style>
 
 <body>
 
@@ -69,11 +75,15 @@
 
 
             <ul class="list-unstyled components">
-                <div style="padding-left:8px;">Title</div>
+                <div style="padding-left:8px;">Admin Priveleges</div>
                 <li>
                     <a href='{{ url("/gradingfaculty") }}' title="Faculties">
                         <i class="fas fa-user-tie"></i>
                         <span class="hide-word title-word"> <b>Faculties</b> </span>
+                    </a>
+                    <a href='{{ route('create_faculty') }}' title="Faculties">
+                        <i class="fas fa-user-tie"></i>
+                        <span class="hide-word title-word"> <b>Faculty Accounts</b> </span>
                     </a>
                 </li>
             </ul>
@@ -138,8 +148,7 @@
     <!-- Popper.JS -->
     <script src="{{ asset('assets/js/popper.js') }}"></script>
     <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script> -->
-    <!-- Bootstrap JS -->
-    <script src="{{ asset('assets/js/bootstrap-4.1.0-min.js') }}"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
     <!-- <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script> -->
 
     <script type="text/javascript">

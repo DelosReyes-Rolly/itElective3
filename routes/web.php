@@ -46,6 +46,8 @@ Route::group(['middleware' => 'prevent-back-history'],function(){
 
             Route::get('admin/home', 'adminHome')->name('admin.home');
             Route::get('admin/profile', 'profile')->name('admin.profile');
+            Route::get('admin/faculties/faculty-accounts', 'create_faculty')->name('create_faculty');
+            Route::post('admin/faculties/store-faculty', 'store_faculty')->name('store_faculty');
         });
     });
 
