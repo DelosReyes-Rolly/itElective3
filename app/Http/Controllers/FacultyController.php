@@ -20,8 +20,9 @@ class FacultyController extends Controller
 
     public function index()
     {
-        $teacher_id = DB::table('users')->join('teachers', 'users.id', '=', 'teachers.user_id')->select(['teachers.id'])->first();
-        $subjectteachers = SubjectTeachers::where('deleted_at', '=', null)->where('teacher_id', '=', $teacher_id->id)->get();
+        $teacher_id = 0;
+        $teachers_id = DB::table('users')->join('teachers', 'users.id', '=', 'teachers.user_id')->where('teachers.user_id', '=', Auth::user()->id)->select(['teachers.id'])->first();
+        $subjectteachers = SubjectTeachers::where('deleted_at', '=', null)->where('teacher_id', '=', $teachers_id->id)->get();
         return view('faculty.home', compact('subjectteachers'));
     }
 
