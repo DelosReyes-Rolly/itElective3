@@ -16,7 +16,7 @@
         <div class="row">
             <div class="col-md-12">
                 <label style="font-size: 20px;"><span style="color: red">*</span> Semester Name</label>
-                <input id="semester_name" type="text" name="semester_name"  class="form-control @error('semester_name') is-invalid @enderror" value="{{$semester->semester_name}}" onkeydown="return alphaOnly(event);" style="font-size: 18px;"  required>
+                <input id="semester_name" type="text" name="semester_name"  class="form-control @error('semester_name') is-invalid @enderror" value="{{$semester->semester_name}}" style="font-size: 18px;"  required>
                 <div class="invalid-feedback">
                     Please input valid semester name.
                 </div>
