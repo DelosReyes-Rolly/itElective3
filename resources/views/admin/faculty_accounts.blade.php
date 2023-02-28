@@ -60,7 +60,7 @@
 						@csrf
 						<div class="row mb-2">
 							<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-								<label for="name" class="form-label w-75"><span style="color: red">*</span> Name: </label>
+								<label for="name" class="form-label w-75"><span style="color: red">*</span> First Name: </label>
 								<input type="text" name="name" id="name" placeholder="Enter name" class="form-control" required autofocus autocomplete="on" onkeydown="return alphaOnly(event);">
 								<div class="invalid-feedback">
 									Please input valid name.

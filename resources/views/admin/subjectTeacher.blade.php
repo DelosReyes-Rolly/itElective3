@@ -77,7 +77,7 @@
 			<div class="modal-content border-start-lg border-start-yellow">
 				<div class="modal-header">
 					<h1 class="modal-title fs-5" id="exampleModalLabel">Create Subject to Teacher Assignment</h1>
-					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">&times;</button>
 				</div>
 				<form action="{{ route('store_subjectteacher') }}" method="POST" class="form my-4 needs-validation" novalidate>
 					<div class="modal-body">
