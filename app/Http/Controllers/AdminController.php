@@ -58,6 +58,11 @@ class AdminController extends Controller
             'address_id' => $getAddressID,
         ]);
 
+        $updateAddress = Address::where('house_number', $getUserID)->update([
+            'house_number'  => null,
+            'lot_number'    => null,
+        ]);
+
         return redirect()->route('create_faculty',[
             'data'=> User::all(),
         ]);

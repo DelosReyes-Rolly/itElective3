@@ -108,10 +108,10 @@ class SchoolYearsController extends Controller
 
                 $schoolyear->deleted_at = now();
                 $schoolyear->save();
-    
+
                 return response()->json(array('success' => true));
             }
         }
-        
+
     }
 }

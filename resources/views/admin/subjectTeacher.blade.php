@@ -6,7 +6,7 @@
 	<div class="announcement_text top-to-bottom">Manage School Year</div>
 </div>
 <section id="about" class="about">
-	<div id="main-content" class="blog-page">		
+	<div id="main-content" class="blog-page">
 		<hr class="mt-0 mb-4">
         <div class="card mb-4 border-start-lg border-start-success" style="padding: 10px 20px 10px 20px;">
 			<div class="card-header" style="background-color: #ffffff;">
@@ -22,10 +22,20 @@
                         <strong>{{ $message }}</strong>
                     </div>
                 @endif
+                @if (count($errors) > 0)
+							<div class="alert alert-danger">
+								<strong>Whoops!</strong> There were some problems with your input.
+								<ul>
+									@foreach ($errors->all() as $error)
+										<li>{{ $error }}</li>
+									@endforeach
+								</ul>
+							</div>
+						@endif
                 @if($subjectteachers->count() == 0)
 					<br><br>
 					<div class="alert alert-danger"><em>No records found.</em></div>
-				@else 
+				@else
                     <div class="table-responsive table-billing-history">
                         <table id="firstDataTable" class="display table-bordered table-striped table-hover" style="width:100%">
                             <thead style="background-color:#00cc00; color:#004d00;">
@@ -36,7 +46,7 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                <?php 
+                                <?php
                                     $i=1;
                                 ?>
                                     @foreach ($subjectteachers as $subjectteacher)
@@ -44,11 +54,11 @@
                                             <td width="2%" class="text-center"><?php echo $i++; ?></td>
                                             <td width="40%"></td>
                                             <td width="30%">
-											
-                                            </td> 
+
+                                            </td>
                                         </tr>
-										
-                                    @endforeach 
+
+                                    @endforeach
                             </tbody>
                         </table>
                     </div>
@@ -64,7 +74,7 @@
 		<div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
 			<div class="modal-content border-start-lg border-start-yellow">
 				<div class="modal-header">
-					<h1 class="modal-title fs-5" id="exampleModalLabel">Create subjectteacher</h1>
+					<h1 class="modal-title fs-5" id="exampleModalLabel">Create Subject to Teacher Assignment</h1>
 					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
 				</div>
 				<form action="{{ route('store_subjectteacher') }}" method="POST" class="form my-4 needs-validation" novalidate>
@@ -72,19 +82,77 @@
 						<span class="form-text text-danger"> * Required field </span>
 						@csrf
 						<div class="row">
+                            <div class="col-md-12" style="font-size: 18px;">
+                                <label for="year_from" class="form-label w-75"><span class="form-text text-danger">* </span>Teacher: </label>
+								<select id="teacher_id" name="teacher_id"  class="@error('teacher_id') is-invalid @enderror" style="font-size: 16px; padding: 6px; width:100%;">
+									<option value="" hidden> Please Select a Teacher</option>
+                                    @foreach ($teachers as $teacher)
+									    <option value="{{ $teacher->id }}">{{ strtoupper($teacher->last_name) }}, {{ $teacher->first_name }}</option>
+                                    @endforeach
+								</select>
+							</div>
+                            <div class="col-md-12" style="font-size: 18px;">
+                                <label for="year_from" class="form-label w-75"><span class="form-text text-danger">* </span>Course: </label>
+								<select id="course_id" name="course_id"  class="@error('course_id') is-invalid @enderror" style="font-size: 16px; padding: 6px; width:100%;">
+									<option value="" hidden> Please Select a Course</option>
+                                    @foreach ($courses as $course)
+									    <option value="{{ $course->id }}">{{ strtoupper($course->course_name) }}</option>
+                                    @endforeach
+								</select>
+							</div>
+                            <div class="col-md-12" style="font-size: 18px;">
+                                <label for="year_from" class="form-label w-75"><span class="form-text text-danger">* </span>Subject: </label>
+								<select id="subject_id" name="subject_id"  class="@error('subject_id') is-invalid @enderror" style="font-size: 16px; padding: 6px; width:100%;">
+									<option value="" hidden> Please Select a Subject</option>
+                                    @foreach ($subjects as $subject)
+									    <option value="{{ $subject->id }}">{{ $subject->subject_name }}</option>
+                                    @endforeach
+								</select>
+							</div>
+                            <div class="col-md-12" style="font-size: 18px;">
+                                <label for="year_from" class="form-label w-75"><span class="form-text text-danger">* </span>Semester: </label>
+								<select id="semester_id" name="semester_id"  class="@error('semester_id') is-invalid @enderror" style="font-size: 16px; padding: 6px; width:100%;">
+									<option value="" hidden> Please Select a Semester</option>
+                                    @foreach ($semesters as $semester)
+									    <option value="{{ $semester->id }}">{{ $semester->semester_name }}</option>
+                                    @endforeach
+								</select>
+							</div>
+                            <div class="col-md-12" style="font-size: 18px;">
+                                <label for="year_from" class="form-label w-75"><span class="form-text text-danger">* </span>School Year: </label>
+								<select id="sy_id" name="sy_id"  class="@error('sy_id') is-invalid @enderror" style="font-size: 16px; padding: 6px; width:100%;">
+									<option value="" hidden> Please Select a School Year</option>
+                                    @foreach ($school_years as $sy)
+									    <option value="{{ $sy->id }}">S.Y. {{ $sy->year_from }} to {{ $sy->year_to }}</option>
+                                    @endforeach
+								</select>
+							</div>
                             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12"><br/>
-								<label for="year_from" class="form-label w-75"><span class="form-text text-danger">* </span>Year from: </label>
-								<input type="number" name="year_from" id="year_from" placeholder="from" class="form-control" required autofocus autocomplete="on">
+								<label for="time_from" class="form-label w-75"><span class="form-text text-danger">* </span>Time From: </label>
+								<input type="time" name="time_from" id="time_from" placeholder="from" class="form-control" required autofocus autocomplete="on">
 								<div class="invalid-feedback">
-									Please input valid year.
+									Please input valid time.
 								</div>
 							</div>
                             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12"><br/>
-								<label for="year_to" class="form-label w-75"><span class="form-text text-danger">* </span>Year to: </label>
-								<input type="number" name="year_to" id="year_to" placeholder="to" class="form-control" required autofocus autocomplete="on">
+								<label for="time_to" class="form-label w-75"><span class="form-text text-danger">* </span>Time To: </label>
+								<input type="time" name="time_to" id="time_to" placeholder="from" class="form-control" required autofocus autocomplete="on">
 								<div class="invalid-feedback">
-									Please input valid year.
+									Please input valid time.
 								</div>
+							</div>
+                            <div class="col-md-12" style="font-size: 18px;">
+                                <label for="days_of_week" class="form-label w-75"><span class="form-text text-danger">* </span>Day of Week: </label>
+								<select id="days_of_week" name="days_of_week"  class="@error('days_of_week') is-invalid @enderror" style="font-size: 16px; padding: 6px; width:100%;">
+									<option value="" hidden> Please Select a day of week</option>
+                                    <option value="Monday">Monday</option>
+                                    <option value="Tuesday">Tuesday</option>
+                                    <option value="Wednesday">Wednesday</option>
+                                    <option value="Thursday">Thursday</option>
+                                    <option value="Friday">Friday</option>
+                                    <option value="Saturday">Saturday</option>
+                                    <option value="Sunday">Sunday</option>
+								</select>
 							</div>
 						</div>
 					</div>
@@ -103,7 +171,7 @@
 
 <script>
 	$(document).ready(function(){
-    
+
 	editItem(e);
 	deleteItem(e);
 	});
