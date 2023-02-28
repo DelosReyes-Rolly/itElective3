@@ -26,7 +26,6 @@
                                 <th width="20%" class="border-gray-200" scope="col">Email</th>
 								<th width="6%" class="border-gray-200" scope="col">Sex</th>
 								<th width="10%" class="border-gray-200" scope="col">Contact no.</th>
-								<th width="10%" class="border-gray-200" scope="col">Actions</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -37,10 +36,6 @@
 									<td>{{$user->email}}</td>
 									<td>{{''}}</td>
 									<td>{{''}}</td>
-									<td>
-										<button type="button" title="view" class="btn btn-primary btn-sm"><i class="fa-regular fa-eye fa-sm"></i></button>
-										<button type="button" title="view" class="btn btn-danger btn-sm"><i class="fa-regular fa-trash-can fa-sm"></i></button>
-									</td>
 								</tr>
 							@endforeach
                         </tbody>
