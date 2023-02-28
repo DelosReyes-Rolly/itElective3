@@ -39,49 +39,13 @@
 <body>
 
     <div class="wrapper">
-        <!-- Sidebar  -->
-        <nav id="sidebar" class="sticky-top h-100 vh-100" style="box-shadow: 0 4px 16px rgba(0,0,0,0.4);">
-            <div class="sidebar-header">
-            <div class="title" style="text-shadow: 0 4px 16px rgba(0,0,0,1);"><img src="{{url('/img/ocsr.png')}}" style="width: 80px; height: 80px;"><div style="font-size: 20px;"> Online Course Subject Registration </div> <br/> OCSR</div>
-                <strong> <img src="{{url('/img/ocsr.png')}}" style="width: auto; height: auto;"></strong>
-            </div>
 
-            <ul class="list-unstyled components">
-                <li title="Bulletin">
-                    <a href="{{ url('/') }}">
-                        <i class="fas fa-chalkboard"></i>
-                        <span class="hide-word title-word"><b>
-                             <div class="Ashort">Bulletin</div>
-                             <div class="Along">Bulletin</div>
-                        </b></span>
-                    </a>
-                </li>
-                <li>
-                    <a href="#academicSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle" title="Grades">
-                    <i class="fas fa-school"></i>
-                        <span class="hide-word title-word"><b> Class</b></span>
-                    </a>
-                    <ul class="collapse list-unstyled" id="academicSubmenu">
-                        <li title="Subjects">
-                            <a href='{{ url("/facultysubjects") }}'><i class="fas fa-calendar-alt"></i> <span class="hide-word"><b> Schedule</b></span></a>
-                        </li>
-                        <li title="Evaluation Requests">
-                            <a href='{{ url("/facultygradeeval") }}'><i class="fas fa-home"></i> <span class="hide-word"><b> Week</b></span></a>
-                        </li>
-                    </ul>
-                </li>
-            </ul>
-        </nav>
 
         <!-- Page Content  -->
         <div id="content" style="padding: 0px;">
 
             <nav class="navbar navbar-expand-lg navbar-light sticky-top">
                 <div class="container-fluid">
-
-                    <button type="button" id="sidebarCollapse" class="btn btn-info">
-                        <i class="fas fa-align-left"></i>
-                    </button>
                     <div style="padding-left:10px; color: #fff; font-weight:bold; font-style: Verdana;">Welcome, Teacher {{Auth::user()->name}}!</div>
                     <button class="btn btn-dark d-inline-block d-lg-none ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                         <i class="fas fa-align-justify"></i>

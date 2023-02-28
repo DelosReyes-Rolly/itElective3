@@ -10,6 +10,7 @@
                         <center>
                             <img src='{{ URL::asset("img/ocsr.png")}}'>
                             <h6>ONLINE COURSE <br>REGISTRATION</h6>
+                            Virtuso&ensp;|&ensp;Agustin&ensp;|&ensp;Vinoya&ensp;|&ensp;Pajaron&ensp;|&ensp;Gierza&ensp;|&ensp;Geneta&ensp;|&ensp;Revillas&ensp;|&ensp;Delos Reyes
                         </center>
                     </div>
                 </div>
@@ -19,7 +20,7 @@
                             <img src='{{ URL::asset("img/ocsr.png")}}'><br/><br/>
                         </center>
                     </div>
-                    <div class="card-header" style="background-color: #1c8a43; color:white; text-align:center; border-radius:10px; font-weight:bold; font-family: arial black"> {{ isset($url) ? ucwords($url) : ""}} {{ __('Login') }}</div>
+                    <div class="card-header" style="background-color: #3A98B9; color:white; text-align:center; border-radius:10px; font-weight:bold; font-family: arial black"> {{ isset($url) ? ucwords($url) : ""}} {{ __('Login') }}</div>
                     <br><br>
                     <form method="POST" action="{{ route('login') }}">
                         @csrf

@@ -3,6 +3,10 @@
 namespace App\Http\Controllers;
 
 use App\Models\Address;
+use App\Models\Courses;
+use App\Models\SchoolYears;
+use App\Models\Subjects;
+use App\Models\SubjectTeachers;
 use App\Models\Teacher;
 use App\Models\User;
 use Illuminate\Http\Request;
@@ -17,7 +21,12 @@ class AdminController extends Controller
 
     public function adminHome()
     {
-        return view('admin.adminHome');
+        $schoolyear = SchoolYears::where('deleted_at', '=', null)->count();
+        $schedules = SubjectTeachers::where('deleted_at', '=', null)->count();
+        $faculties = Teacher::where('deleted_at', '=', null)->count();
+        $courses = Courses::where('deleted_at', '=', null)->count();
+        $subjects = Subjects::where('deleted_at', '=', null)->count();
+        return view('admin.adminHome', compact('schoolyear', 'schedules', 'faculties', 'courses', 'subjects'));
     }
 
     public function profile(){

@@ -45,11 +45,11 @@ body{
 a,a:hover,a:active,a:focus {
 	display:inline-block;
 	text-decoration:none;
-	color: #036322;
+	color: #3A98B9;
 }
 h1,h2,h3,h4,h5,h6 { 
 	margin: 0;
-	color:#036322;
+	color:#3A98B9;
     font-size: 16px;
 	font-family: 'Poppins', sans-serif;
 }
@@ -98,7 +98,7 @@ html,body{
 }
 @media (min-width: 1024px){}
 nav.navbar.bootsnav.no-background {
-    background-color: #032e12;
+    background-color: #3A98B9;
     border: none;
     box-shadow: 0 4px 16px rgba(0,0,0,1);
 }
@@ -108,13 +108,13 @@ nav.navbar.bootsnav {
     border-bottom: transparent;
     box-shadow: 0 4px 16px rgba(0,0,0,1);
     padding-bottom: 60px;
-    box-shadow: inset 0 0px 0 #f3dc60;
+    box-shadow: inset 0 0px 0 #FFF1DC;
 }
 
 /*.navbar-brand*/
 .navbar-header a.navbar-brand,.navbar-header a.navbar-brand:hover,.navbar-header a.navbar-brand:focus {
     display: inline-block;
-    color: #edcd1f;
+    color: #E8D5C4;
     font-size: 40px;
     font-weight: bolder;
     padding: 40px 0px 40px;
@@ -134,7 +134,7 @@ li > a{
 }
 
 button.hover{
-    border-top: 2px solid yellow;
+    border-top: 2px solid #FFF1DC;
 }    
 nav.navbar.bootsnav ul.nav > li > a {
     font-size: 16px;
@@ -147,7 +147,7 @@ nav.navbar.bootsnav ul.nav > li > a {
     transition: 0.3s linear;
 }
 nav.navbar.bootsnav ul.nav > li > a {margin: 60px 8px -40px 8px; padding-top: 10px; color: #ffffff;}
-nav.navbar.bootsnav ul.nav > li > a:hover,nav.navbar.bootsnav ul.nav > li > a:focus,nav.navbar.bootsnav ul.nav > li.active>a{color: #edcd1f; border-top: 6px solid #edcd1f;}
+nav.navbar.bootsnav ul.nav > li > a:hover,nav.navbar.bootsnav ul.nav > li > a:focus,nav.navbar.bootsnav ul.nav > li.active>a{color: #E8D5C4; border-top: 6px solid #E8D5C4;}
 
 nav.navbar.bootsnav ul.nav > li > button {
     font-size: 16px;
@@ -162,7 +162,7 @@ nav.navbar.bootsnav ul.nav > li > button {
 
 }
 nav.navbar.bootsnav ul.nav > li > button {margin: 60px 8px 0px 8px; padding-top: 10px;  border-top: 2px solid #ffffff; color: #ffffff;}
-nav.navbar.bootsnav ul.nav > li > button:hover,nav.navbar.bootsnav ul.nav > li > button:focus,nav.navbar.bootsnav ul.nav > li.active>button{color: #edcd1f; border-top: 6px solid #edcd1f;} 
+nav.navbar.bootsnav ul.nav > li > button:hover,nav.navbar.bootsnav ul.nav > li > button:focus,nav.navbar.bootsnav ul.nav > li.active>button{color: #E8D5C4; border-top: 6px solid #E8D5C4;} 
 
 
 nav.navbar.bootsnav ul.nav > li.dropdown > a.dropdown-toggle:after {
@@ -173,7 +173,7 @@ nav.navbar.bootsnav ul.nav > li.dropdown span {
     margin-left: 15px;
 }
 .sticky-wrapper.is-sticky nav.navbar.bootsnav ul.nav > li > a {color:#6a708e;}
-.sticky-wrapper.is-sticky nav.navbar.bootsnav ul.nav > li > a:hover,.sticky-wrapper.is-sticky nav.navbar.bootsnav ul.nav > li > a:focus,.sticky-wrapper.is-sticky nav.navbar.bootsnav ul.nav > li.active>a{color: #036322;}
+.sticky-wrapper.is-sticky nav.navbar.bootsnav ul.nav > li > a:hover,.sticky-wrapper.is-sticky nav.navbar.bootsnav ul.nav > li > a:focus,.sticky-wrapper.is-sticky nav.navbar.bootsnav ul.nav > li.active>a{color: #3A98B9;}
 /*.nav li*/
 
 
@@ -187,7 +187,7 @@ nav.navbar.bootsnav ul.nav > li.dropdown span {
     -webkit-box-shadow: inset 0 0 8px #000;
 }
 .menu-ui-design::-webkit-scrollbar-thumb {
-  background-color: #f3dc60;
+  background-color: #FFF1DC;
 }
 /*.menu-ui-design*/
 
@@ -197,11 +197,11 @@ nav.navbar.bootsnav ul.nav > li.dropdown span {
 nav.navbar.bootsnav .navbar-toggle {
     position: relative;
     background-color: transparent;
-    border: 2px solid #036322;
+    border: 2px solid #3A98B9;
     padding: 10px;
     top: 0;
 }
-nav.navbar.bootsnav .navbar-toggle i{color: #f3dc60;}
+nav.navbar.bootsnav .navbar-toggle i{color: #FFF1DC;}
 /*.navbar-toggle */
 
 
@@ -256,7 +256,7 @@ nav.navbar.bootsnav .navbar-toggle i{color: #f3dc60;}
 }
 
 .titlelanding{
-    border-bottom: 6px solid #f3dc60;
+    border-bottom: 6px solid #FFF1DC;
     width: auto;
     font-size: 40px;
     font-weight: bold;
@@ -271,7 +271,7 @@ nav.navbar.bootsnav .navbar-toggle i{color: #f3dc60;}
 }
 
 .videotitleborder{
-  border-bottom: 6px solid #f3dc60;
+  border-bottom: 6px solid #FFF1DC;
   width: auto;
   margin-bottom: 60px;
 }
@@ -280,7 +280,7 @@ nav.navbar.bootsnav .navbar-toggle i{color: #f3dc60;}
     box-shadow: 0 5px 20px rgba(0,0,0,2);
     color: white;
     font-size: 20px;
-    background-color: #edcd1f;
+    background-color: #E8D5C4;
     border-radius: 40px;
     padding: 8px 12px 8px 12px;
     width: 200px;
@@ -290,7 +290,7 @@ nav.navbar.bootsnav .navbar-toggle i{color: #f3dc60;}
     font-weight: 400;
 }
 
-.header-text h2 span {color: #f3dc60;}
+.header-text h2 span {color: #FFF1DC;}
 .header-text p {
     color: #fff;
     font-size: 20px;
@@ -306,7 +306,7 @@ nav.navbar.bootsnav .navbar-toggle i{color: #f3dc60;}
     border-radius: 3px;
     text-transform: capitalize;
     color: #fff;
-    background: #036322;
+    background: #3A98B9;
     border:1px solid #b636ff;
     box-shadow: 0 5px 20px rgba(0,0,0,.2);
     -webkit-transition: 0.3s linear; 
@@ -315,7 +315,7 @@ nav.navbar.bootsnav .navbar-toggle i{color: #f3dc60;}
     -o-transition: 0.3s linear; 
     transition: 0.3s linear;
 }
-.header-text a:hover{ box-shadow: 0 5px 20px rgba(0,0,0,.4);background:#036322;border: 1px solid #036322;}
+.header-text a:hover{ box-shadow: 0 5px 20px rgba(0,0,0,.4);background:#3A98B9;border: 1px solid #3A98B9;}
 /*.header-text-area*/
 
 /*-------------------------------------
@@ -666,7 +666,7 @@ nav.navbar.bootsnav .navbar-toggle i{color: #f3dc60;}
     content: " ";
     top:0;
     left:0;
-    background:rgba(0,128,0,0.4);
+    background:rgba(210, 204, 178, 0.4);
     width:100%;
     height:100%;
 }
@@ -686,7 +686,7 @@ nav.navbar.bootsnav .navbar-toggle i{color: #f3dc60;}
   content: " ";
   top:0;
   left:0;
-  background:rgba(0,128,0,0.4);
+  background:rgba(210, 204, 178, 0.4);
   width:100%;
   height:100%;
 }
@@ -800,7 +800,7 @@ nav.navbar.bootsnav .navbar-toggle i{color: #f3dc60;}
 	  font-size: 14px;
 	}
 	.footer-widget .ul-footer .li-footer .a-footer:hover{
-	  color: green;
+	  color: #EEEEEE;
 	}
 	.footer-widget .ul-footer .li-footer .a-footer {
 	  color: #878787;
@@ -870,7 +870,7 @@ nav.navbar.bootsnav .navbar-toggle i{color: #f3dc60;}
     display: block;
 }
 
-.container_title{border-bottom: 8px solid #f3dc60; color: black; letter-spacing: 4px; font-size: 60px;}
+.container_title{border-bottom: 8px solid #FFF1DC; color: black; letter-spacing: 4px; font-size: 60px;}
 
 .course-intro{margin: 40px 180px 40px 180px; font-size: medium; font-weight: 600;display: block;}
 
@@ -883,7 +883,7 @@ nav.navbar.bootsnav .navbar-toggle i{color: #f3dc60;}
 }
 
 .container-course_data_body{
-    background-color: #edcd1f;
+    background-color: #E8D5C4;
     width: 495px;
     height: 550px;
   margin-top: -70px;
@@ -900,8 +900,8 @@ border: 2px solid gray;
 .btn-container-course_data_body{
 font-family: Arial black;
 background-color: black;
-text-decoration-color: yellow;
-color: yellow;
+text-decoration-color: #FFF1DC;
+color: #FFF1DC;
 margin: 0;
 margin-top:  50px;
 font-size: 30px;
@@ -936,7 +936,7 @@ color: white;
 }
 
 .container2-course_data_body{
-    background-color: #edcd1f;
+    background-color: #E8D5C4;
     width: 495px;
     height: 550px;
     margin-top: -550px;
@@ -953,8 +953,8 @@ color: white;
 .btn-container2-course_data_body{
 font-family: Arial black;
 background-color: black;
-text-decoration-color: yellow;
-color: yellow;
+text-decoration-color: #FFF1DC;
+color: #FFF1DC;
 margin: 0;
 margin-top:  50px;
 font-size: 30px;
@@ -1005,7 +1005,7 @@ color: white;
 }
 
 .container5-course_data_body{
-    background-color: #edcd1f;
+    background-color: #E8D5C4;
     width: 495px;
     height: 550px;
     margin-top: -550px;
@@ -1022,8 +1022,8 @@ color: white;
 .btn-container5-course_data_body{
 font-family: Arial black;
 background-color: black;
-text-decoration-color: yellow;
-color: yellow;
+text-decoration-color: #FFF1DC;
+color: #FFF1DC;
 margin: 0;
 margin-top:  50px;
 font-size: 30px;
@@ -1058,7 +1058,7 @@ color: white;
 }
 
 .container7-course_data_body{
-    background-color: #edcd1f;
+    background-color: #E8D5C4;
     width: 495px;
     height: 550px;
     margin-top: -550px;
@@ -1072,8 +1072,8 @@ color: white;
 .btn-container7-course_data_body{
 font-family: Arial black;
 background-color: black;
-text-decoration-color: yellow;
-color: yellow;
+text-decoration-color: #FFF1DC;
+color: #FFF1DC;
 margin: 0;
 margin-top:  50px;
 font-size: 30px;
@@ -1094,7 +1094,7 @@ color: white;
 
 
 .container8-course_data_body{
-    background-color: #edcd1f;
+    background-color: #E8D5C4;
     width: 495px;
     height: 550px;
     margin-top: 70px;
@@ -1111,8 +1111,8 @@ color: white;
 .btn-container8-course_data_body{
 font-family: Arial black;
 background-color: black;
-text-decoration-color: yellow;
-color: yellow;
+text-decoration-color: #FFF1DC;
+color: #FFF1DC;
 margin: 0;
 margin-top:  50px;
 font-size: 30px;
@@ -1154,7 +1154,7 @@ color: white;
 
 
 .container10-course_data_body{
-    background-color: #edcd1f;
+    background-color: #E8D5C4;
     width: 495px;
     height: 550px;
     margin-top: -550px;
@@ -1171,8 +1171,8 @@ color: white;
 .btn-container10-course_data_body{
   font-family: Arial black;
   background-color: black;
-  text-decoration-color: yellow;
-  color: yellow;
+  text-decoration-color: #FFF1DC;
+  color: #FFF1DC;
   margin: 0;
   margin-top:  50px;
   font-size: 30px;
@@ -1222,7 +1222,7 @@ color: white;
 }
 
 .container13-course_data_body{
-    background-color: #edcd1f;
+    background-color: #E8D5C4;
     width: 495px;
     height: 550px;
     margin-top: -550px;
@@ -1239,8 +1239,8 @@ color: white;
 .btn-container13-course_data_body{
 font-family: Arial black;
 background-color: black;
-text-decoration-color: yellow;
-color: yellow;
+text-decoration-color: #FFF1DC;
+color: #FFF1DC;
 margin: 0;
 margin-top:  50px;
 font-size: 30px;
@@ -1275,7 +1275,7 @@ color: white;
 }
 
 .container15-course_data_body{
-    background-color: #edcd1f;
+    background-color: #E8D5C4;
     width: 495px;
     height: 550px;
     margin-top: -550px;
@@ -1292,8 +1292,8 @@ color: white;
 .btn-container15-course_data_body{
 font-family: Arial black;
 background-color: black;
-text-decoration-color: yellow;
-color: yellow;
+text-decoration-color: #FFF1DC;
+color: #FFF1DC;
 margin: 0;
 margin-top:  50px;
 font-size: 30px;
@@ -1333,19 +1333,19 @@ color: white;
     transition: background .4s ease;
   }
   .buttones3 {
-    background-color: green;
+    background-color: #EEEEEE;
     transition: color .4s ease;
     transition: background .4s ease;
   }
 
   .buttones:hover{
     background-color: #ffffff;
-    color: #edcd1f;
+    color: #E8D5C4;
   }
 
   .buttone2:hover{
     background-color: #ffffff;
-    color: #edcd1f;
+    color: #E8D5C4;
   }
 
   /* ===============================================COURSE DESCRIPTION====================== */
@@ -1369,7 +1369,7 @@ img{
     margin: 0 auto;
     margin-top: 100px;
     width: 60%;
-    background-color: #f3dc60;
+    background-color: #FFF1DC;
     border-radius: 20px;
     overflow: hidden;
     display: flex;
@@ -1384,7 +1384,7 @@ img{
     padding: 60px 30px 60px 30px;
     width: 100%;
     height: 100%;
-    background: #edcd1f;
+    background: #E8D5C4;
     overflow: hidden;
     box-sizing: border-box;
 }
@@ -1430,7 +1430,7 @@ input[type=text], input[type=password], input[type=email], textarea[type=text], 
 
 button[type=submit]{       /*login button*/   
     font-family:arial;
-    background-color: #1c8a43;
+    background-color: #3A98B9;
     color: white;
     padding: 10px 20px;
     cursor: pointer;
@@ -1497,7 +1497,7 @@ button[type=submit]{       /*login button*/
   content: " ";
   top:0;
   left:0;
-  background:rgba(0,128,0,0.4);
+  background:rgba(44, 42, 73, 0.4);
   width:100%;
   height:100%;
 }
@@ -1522,7 +1522,7 @@ button[type=submit]{       /*login button*/
 .border-start-success {
     border-left-color: #00ac69 !important;
 }
-.border-start-yellow {
+.border-start-#FFF1DC {
   border-left-color: #ffff4d !important;
 }
 .border-start-lg {
@@ -1719,7 +1719,7 @@ button[type=submit]{       /*login button*/
 
 .card-header .titled{
     color: white; 
-    background-color: green; 
+    background-color: #EEEEEE; 
     border-radius: 6px;
     padding-bottom: 20px;
 }
@@ -1987,7 +1987,7 @@ button[type=submit]{       /*login button*/
   .faculty-title{
     font-size: 40px;
     font-weight: bold;
-    color: #036322;
+    color: #12272f;
   }
 
   .teachername{
@@ -2002,7 +2002,7 @@ button[type=submit]{       /*login button*/
   .teacherposition{
     font-size: 16px;
     font-weight: 800;
-    color:#036322;
+    color:#3A98B9;
     text-transform: uppercase;
     padding: 10px 10px 0px 10px;
   }
@@ -2039,7 +2039,7 @@ button[type=submit]{       /*login button*/
 }
 
 #myBtn:hover {
-  background-color: #edcd1f;
+  background-color: #E8D5C4;
   -webkit-transition: 0.3s linear; 
   -moz-transition: 0.3s linear; 
   -ms-transition: 0.3s linear; 
@@ -2238,7 +2238,7 @@ button[type=submit]{       /*login button*/
 }
 
 .systematech:hover{
-  color:#edcd1f;
+  color:#E8D5C4;
   -webkit-transition: 0.3s linear; 
   -moz-transition: 0.3s linear; 
   -ms-transition: 0.3s linear; 
@@ -2253,7 +2253,7 @@ button[type=submit]{       /*login button*/
   font-size: 1.2rem;
   }
 @media (min-width: 768px) {
-  .modal {
+  .modal-add {
     position: absolute;
     float: left;
     left: 50%;

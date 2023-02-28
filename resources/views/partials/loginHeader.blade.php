@@ -76,7 +76,6 @@
 			                	<li class=" smooth-menu active"></li>
 			                    <li class="smooth-menu"><a class="a-header" href='{{ url("/") }}'>Home</a></li>
 								<li class="smooth-menu"><a class="a-header" href='{{ url("/login") }}'>Login</a></li>
-                                <li class="smooth-menu"><a class="a-header" href='{{ url("/register") }}'>Register</a></li>
                             </ul><!--/.nav -->
 			            </div><!-- /.navbar-collapse -->
 			        </div><!--/.container-->

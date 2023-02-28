@@ -8,7 +8,7 @@
 <section id="about" class="about">
 	<div id="main-content" class="blog-page">		
 		<hr class="mt-0 mb-4">
-        <div class="card mb-4 border-start-lg border-start-success" style="padding: 10px 20px 10px 20px;">
+        <div class="card mb-4 border-start-lg border-start-primary" style="padding: 10px 20px 10px 20px;">
 			<div class="card-header" style="background-color: #ffffff;">
 				<div style="float:right; text-align: right;">
 					<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#create_semester">
@@ -28,7 +28,7 @@
 				@else 
                     <div class="table-responsive table-billing-history">
                         <table id="firstDataTable" class="display table-bordered table-striped table-hover" style="width:100%">
-                            <thead style="background-color:#00cc00; color:#004d00;">
+                            <thead style="background-color:#b2dce4; color:black;">
                                 <tr>
                                     <th width="2%" class="border-gray-200" scope="col">#</th>
                                     <th width="40%" class="border-gray-200" scope="col">Semester Name</th>
@@ -74,8 +74,8 @@
 
 
 @section('modals')
-	<div class="modal fade modal-lg" id="create_semester" tabindex="-1" aria-labelledby="create_semester" aria-hidden="true">
-		<div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+	<div class="modal fade modal-lg modal-add" id="create_semester" tabindex="-1" aria-labelledby="create_semester" aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg">
 			<div class="modal-content border-start-lg border-start-yellow">
 				<div class="modal-header">
 					<h1 class="modal-title fs-5" id="exampleModalLabel">Create semester</h1>
