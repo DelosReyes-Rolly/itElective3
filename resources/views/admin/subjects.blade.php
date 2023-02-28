@@ -91,14 +91,14 @@
 						<div class="row">
 							<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
 								<label for="subject_name" class="form-label w-75"><span style="color: red">*</span> Subject name: </label>
-								<input type="text" name="subject_name" id="subject_name" placeholder="Enter name" class="form-control" required autofocus autocomplete="on" onkeydown="return alphaOnly(event);">
+								<input type="text" name="subject_name" id="subject_name" placeholder="Enter name" class="form-control" required autofocus autocomplete="on">
 								<div class="invalid-feedback">
 									Please input valid subject name.
 								</div>
 							</div>
 							<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12"><br/>
 								<label for="subject_description" class="form-label w-75"><span style="color: red">*</span> Subject description: </label>
-								<input type="text" name="subject_description" id="subject_description" placeholder="Enter description" class="form-control" required autofocus autocomplete="on" onkeydown="return alphaOnly(event);">
+								<input type="text" name="subject_description" id="subject_description" placeholder="Enter description" class="form-control" required autofocus autocomplete="on">
 								<div class="invalid-feedback">
 									Please input valid description.
 								</div>

@@ -16,7 +16,7 @@
         <div class="row">
             <div class="col-md-12">
                 <label style="font-size: 20px;"><span style="color: red">*</span> Subject Name</label>
-                <input id="subject_name" type="text" name="subject_name"  class="form-control @error('subject_name') is-invalid @enderror" value="{{$subject->subject_name}}" onkeydown="return alphaOnly(event);" style="font-size: 18px;"  required>
+                <input id="subject_name" type="text" name="subject_name"  class="form-control @error('subject_name') is-invalid @enderror" value="{{$subject->subject_name}}" style="font-size: 18px;"  required>
                 <div class="invalid-feedback">
                     Please input valid subject name.
                 </div>
