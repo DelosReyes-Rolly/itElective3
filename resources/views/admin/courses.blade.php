@@ -77,7 +77,7 @@
 <!-- add modal -->
 
 @section('modals')
-	<div class="modal fade modal-lg modal-add" id="create_course" tabindex="-1" aria-labelledby="create_course" aria-hidden="true">
+	<div class="modal fade modal-lg modal-add h-100" id="create_course" tabindex="-1" aria-labelledby="create_course" aria-hidden="true">
 		<div class="modal-dialog modal-dialog-centered modal-dialog-scrollable  modal-md">
 			<div class="modal-content border-start-lg border-start-yellow">
 				<div class="modal-header">
