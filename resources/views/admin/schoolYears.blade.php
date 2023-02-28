@@ -74,8 +74,8 @@
 
 
 @section('modals')
-	<div class="modal fade modal-lg" id="create_schoolyear" tabindex="-1" aria-labelledby="create_schoolyear" aria-hidden="true">
-		<div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+	<div class="modal fade modal-lg modal-add" id="create_schoolyear" tabindex="-1" aria-labelledby="create_schoolyear" aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg">
 			<div class="modal-content border-start-lg border-start-yellow">
 				<div class="modal-header">
 					<h1 class="modal-title fs-5" id="exampleModalLabel">Create schoolyear</h1>

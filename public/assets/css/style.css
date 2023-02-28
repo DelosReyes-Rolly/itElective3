@@ -2253,7 +2253,7 @@ button[type=submit]{       /*login button*/
   font-size: 1.2rem;
   }
 @media (min-width: 768px) {
-  .modal {
+  .modal-add {
     position: absolute;
     float: left;
     left: 50%;
