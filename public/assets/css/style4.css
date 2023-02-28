@@ -39,7 +39,7 @@ a:focus {
 }
 
 .bca:hover {
-    color: #edcd1f;
+    color: #7386D5;
   }
 
 .navbar {
@@ -48,7 +48,7 @@ a:focus {
     border: none;
     border-radius: 0px;
     margin-bottom: 40px;
-    background-color: #032e12;
+    background-color: #3A98B9;
     box-shadow: 10px 2px 16px rgba(0,0,0,0.8);
 }
 
@@ -100,7 +100,7 @@ span {
 #sidebar {
     min-width: 280px;
     max-width: 280px;
-    background: #068306;
+    background: hsl(198, 48%, 28%);;
     color: #fff;
     transition: all 0.3s;
     min-height: 100vh;
@@ -116,7 +116,7 @@ span {
 .title{
     text-align: center;
     font-weight: bold;
-    color: #e3e318;
+    color: #E8D5C4;
 }
 
 #sidebar.active .sidebar-header .title,
@@ -175,7 +175,7 @@ span {
 
 #sidebar .sidebar-header {
     padding: 18px;
-    background: #184413;
+    background:hsl(196, 51%, 18%);
 }
 
 #sidebar .sidebar-header strong {
@@ -361,7 +361,7 @@ a.article:hover {
     border-top: none;
   }
 .header-letter:hover {
-    color: yellow;
+    color: black;
   }
 
 

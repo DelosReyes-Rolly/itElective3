@@ -33,6 +33,7 @@
 
     <!-- title of site -->
     <title>OCSR</title>
+    <link rel="shortcut icon" type="image/icon" href='{{ URL::asset("img/ocsr.png")}}'/>
 
 </head>
 
@@ -102,7 +103,7 @@
             <nav class="navbar navbar-expand-lg navbar-light sticky-top">
                 <div class="container-fluid">
 
-                    <button type="button" id="sidebarCollapse" class="btn btn-info">
+                    <button type="button" id="sidebarCollapse" class="btn btn-primary">
                         <i class="fas fa-align-left"></i>
                     </button>
                     <div style="padding-left:10px; color: #fff; font-weight:bold; font-style: Verdana;">Welcome {{Auth::user()->name}}!</div>

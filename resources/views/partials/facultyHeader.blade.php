@@ -56,20 +56,6 @@
                         </b></span>
                     </a>
                 </li>
-                <li>
-                    <a href="#academicSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle" title="Grades">
-                    <i class="fas fa-school"></i>
-                        <span class="hide-word title-word"><b> Class</b></span>
-                    </a>
-                    <ul class="collapse list-unstyled" id="academicSubmenu">
-                        <li title="Subjects">
-                            <a href='{{ url("/facultysubjects") }}'><i class="fas fa-calendar-alt"></i> <span class="hide-word"><b> Schedule</b></span></a>
-                        </li>
-                        <li title="Evaluation Requests">
-                            <a href='{{ url("/facultygradeeval") }}'><i class="fas fa-home"></i> <span class="hide-word"><b> Week</b></span></a>
-                        </li>
-                    </ul>
-                </li>
             </ul>
         </nav>
 
@@ -79,7 +65,7 @@
             <nav class="navbar navbar-expand-lg navbar-light sticky-top">
                 <div class="container-fluid">
 
-                    <button type="button" id="sidebarCollapse" class="btn btn-info">
+                    <button type="button" id="sidebarCollapse" class="btn btn-primary">
                         <i class="fas fa-align-left"></i>
                     </button>
                     <div style="padding-left:10px; color: #fff; font-weight:bold; font-style: Verdana;">Welcome, Teacher {{Auth::user()->name}}!</div>
