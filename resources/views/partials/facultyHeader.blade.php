@@ -53,6 +53,9 @@
 
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul class="nav navbar-nav ml-auto">
+                            <li class="nav-item" title="Home">
+                                <a class="header-letter" href="{{ route('home')}}">Home</a>
+                            </li>&emsp;
                             <li class="nav-item" title="Profile">
                                 <a class="header-letter" href='{{ url("faculty/profile") }}'>Profile</a>
                             </li>&emsp;
