@@ -43,7 +43,7 @@
 		<div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
 			<div class="modal-content">
 				<div class="modal-header">
-					<h1 class="modal-title fs-5" id="exampleModalLabel">Create Faculty Accounts</h1>
+					<h1 class="modal-title fs-5" id="exampleModalLabel">Create Faculty Account</h1>
 					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
 				</div>
 				<form action="{{ route('store_faculty') }}" method="POST" class="form my-4 needs-validation" novalidate>
@@ -53,11 +53,17 @@
 						<div class="row mb2">
 							<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
 								<label for="name" class="form-label w-75"><span class="form-text text-danger">* </span>Name: </label>
-								<input type="name" name="name" id="name" placeholder="Enter name" class="form-control" required autofocus autocomplete="on">
+								<input type="text" name="name" id="name" placeholder="Enter name" class="form-control" required autofocus autocomplete="on">
+								<div class="invalid-feedback">
+									Please input valid name.
+								</div>
 							</div>
 							<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
 								<label for="email" class="form-label w-75"><span class="form-text text-danger">* </span>Email Address: </label>
 								<input type="email" name="email" id="email" placeholder="emailaddress@sample.com" class="form-control" required autofocus autocomplete="on">
+								<div class="invalid-feedback">	
+									Please input valid email address.
+								</div>
 							</div>
 							<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
 								<label for="password" class="form-label w-75"><span class="form-text text-danger">* </span>Password</label>
@@ -73,6 +79,9 @@
 									} else {
 									x.type = "password";
 									}'><i class="fa-regular fa-eye"></i></button>
+									<div class="invalid-feedback">
+										Please input valid password.
+									</div>
 								</div>
 							</div>
 						</div>
