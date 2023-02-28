@@ -83,7 +83,8 @@ class SubjectTeachersController extends Controller
                         ->where('days_of_week', $request->days_of_week)
                         ->get();
 
-        $validate_four = SubjectTeachers::where('course_id', $request->course_id)
+        $validate_four = SubjectTeachers::where('teacher_id', $request->teacher_id)
+                        ->where('course_id', $request->course_id)
                         ->where('subject_id', $request->subject_id)
                         ->where('semester_id', $request->semester_id)
                         ->where('schoolyear_id', $request->sy_id)
