@@ -3,7 +3,7 @@
 @include('partials.dataTablesImport')
 @section('content')
 <div class="announcement_body">
-	<div class="announcement_text top-to-bottom">Manage School Year</div>
+	<div class="announcement_text top-to-bottom">Manage Schedule</div>
 </div>
 <section id="about" class="about">
 	<div id="main-content" class="blog-page">
