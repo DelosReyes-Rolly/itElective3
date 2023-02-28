@@ -10,6 +10,7 @@
                         <center>
                             <img src='{{ URL::asset("img/ocsr.png")}}'>
                             <h6>ONLINE COURSE <br>REGISTRATION</h6>
+                            Virtuso&ensp;|&ensp;Agustin&ensp;|&ensp;Vinoya&ensp;|&ensp;Pajaron&ensp;|&ensp;Gierza&ensp;|&ensp;Geneta&ensp;|&ensp;Revillas&ensp;|&ensp;Delos Reyes
                         </center>
                     </div>
                 </div>
