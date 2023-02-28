@@ -36,7 +36,7 @@ class AdminController extends Controller
     public function create_faculty()
     {
         return view('admin.faculty_accounts',[
-            'data'=> User::all(),
+            'data'=> User::where('id', '!=', 1)->get(),
         ]);
     }
 

@@ -42,9 +42,12 @@
                             </tr>
                         </thead>
                         <tbody>
+							<?php 
+                                $i=1;
+                            ?>
                             @foreach ($data as $user)
 								<tr>
-									<td>{{$user->id}}</td>
+									<td width="2%" class="text-center"><?php echo $i++; ?></td>
 									<td>{{$user->name}}</td>
 									<td>{{$user->email}}</td>
 								</tr>
