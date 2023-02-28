@@ -60,16 +60,8 @@ class FacultyController extends Controller
     public function update_profile(Request $request) {
         $request->validate([
             'first_name'    => 'required',
-            'middle_name'   => 'required',
             'last_name'     => 'required',
-            'contact_no'    => 'required',
             'email'         => 'required',
-            'gender'        => 'required',
-            'street'        => 'required',
-            'barangay'      => 'required',
-            'city'          => 'required',
-            'zip_code'      => 'required',
-            'country'       => 'required',
         ]);
 
         $getAddressID = Teacher::where('user_id', Auth::user()->id)->value('address_id');
