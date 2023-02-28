@@ -124,6 +124,8 @@ Route::group(['middleware' => 'prevent-back-history'],function(){
 
             Route::get('/home', 'index')->name('home');
             Route::get('faculty/profile', 'profile')->name('faculty.profile');
+            Route::get('faculty/change_password', 'change_password')->name('faculty.change_password');
+            Route::post('faculty/update_password', 'update_password')->name('update_password');
             Route::post('faculty/profile-update', 'update_profile')->name('faculty.update_profile');
 
         });
