@@ -1,5 +1,5 @@
 <div class="modal-header">
-    <h1 class="modal-title" id="staticBackdropLabel" style="font-size: 20px;">Delete Strand </h1>
+    <h1 class="modal-title" id="staticBackdropLabel" style="font-size: 20px;">Delete School year </h1>
     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
         <span aria-hidden="true">&times;</span>
     </button>
@@ -8,7 +8,7 @@
     <div class="modal-body">
         @csrf
         @method('PUT')
-        <p style="color: red; font-size:20px;">Are you sure you want to delete schoolyear <span id="schoolyearName"> <b>{{$schoolyear->year_from}} - {{$schoolyear->year_to}}</b></span>?</p>
+        <p style="color: red; font-size:20px;">Are you sure you want to delete school year <span id="schoolyearName"> <b>{{$schoolyear->year_from}} - {{$schoolyear->year_to}}</b></span>?</p>
     </div>
     <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>

@@ -39,7 +39,7 @@ a:focus {
 }
 
 .bca:hover {
-    color: #edcd1f;
+    color: #7386D5;
   }
 
 .navbar {
@@ -48,7 +48,7 @@ a:focus {
     border: none;
     border-radius: 0px;
     margin-bottom: 40px;
-    background-color: #032e12;
+    background-color: #3A98B9;
     box-shadow: 10px 2px 16px rgba(0,0,0,0.8);
 }
 
@@ -100,7 +100,7 @@ span {
 #sidebar {
     min-width: 280px;
     max-width: 280px;
-    background: #068306;
+    background: hsl(198, 48%, 28%);;
     color: #fff;
     transition: all 0.3s;
     min-height: 100vh;
@@ -116,7 +116,7 @@ span {
 .title{
     text-align: center;
     font-weight: bold;
-    color: #e3e318;
+    color: #E8D5C4;
 }
 
 #sidebar.active .sidebar-header .title,
@@ -175,7 +175,7 @@ span {
 
 #sidebar .sidebar-header {
     padding: 18px;
-    background: #184413;
+    background:hsl(196, 51%, 18%);
 }
 
 #sidebar .sidebar-header strong {
@@ -206,7 +206,7 @@ span {
 #sidebar ul li.active>a,
 a[aria-expanded="true"] {
     color: #fff;
-    background: #2e642f;
+    background: #2e2f64;
 }
 
 a[data-toggle="collapse"] {
@@ -224,7 +224,7 @@ a[data-toggle="collapse"] {
 ul ul a {
     font-size: 0.9em !important;
     padding-left: 60px !important;
-    background: #244c1c;
+    background: #18173e;
 }
 
 ul.CTAs {
@@ -340,7 +340,7 @@ a.article:hover {
     font-size: 18px;
     border: none;
     outline: none;
-    background-color: rgb(18, 161, 61);
+    background-color: rgb(61, 18, 161);
     color: white;
     cursor: pointer;
     padding: 15px;
@@ -361,7 +361,7 @@ a.article:hover {
     border-top: none;
   }
 .header-letter:hover {
-    color: yellow;
+    color: black;
   }
 
 

@@ -18,16 +18,7 @@
 			<hr>
 			<div class="row">
 				<div class="col-md-3 border-right">
-					<div class="d-flex flex-column align-items-center text-center p-3 py-5"><img class="rounded-circle mt-5" width="150px"
-						@if (Auth::user()->gender == "Male")
-							src="{{ URL::asset('img/profile-male.png')}}"><br>
-						@elseif(Auth::user()->gender == "Female")
-							src="{{ URL::asset('img/profile-female.png')}}"><br>
-						@elseif(Auth::user()->gender == "Others")
-							src="{{ URL::asset('img/ocsr.png')}}"><br>
-						@else
-							src="{{ URL::asset('img/svnhs-logo.png')}}"><br>
-						@endif
+					<div class="d-flex flex-column align-items-center text-center p-3 py-5"><img class="rounded-circle mt-5" width="150px" src='{{ URL::asset("img/ocsr.png")}}'>
 						<span class="font-weight-bold"> {{Auth::user()->first_name}} {{Auth::user()->middle_name}} {{Auth::user()->last_name}} </span><span class="text-black-50"><br>Faculty</span><span> </span><br/><br/>
 					</div>
 				</div>

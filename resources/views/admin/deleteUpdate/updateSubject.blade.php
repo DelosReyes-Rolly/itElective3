@@ -1,6 +1,6 @@
 <script src="{{ asset('assets/js/needs-validated.js') }}"></script>
 <div class="modal-header">
-    <h1 class="modal-title" id="staticBackdropLabel" style="font-size: 20px;">Update Strand</h1>
+    <h1 class="modal-title" id="staticBackdropLabel" style="font-size: 20px;">Update Subject</h1>
     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
         <span aria-hidden="true">&times;</span>
     </button>
@@ -16,7 +16,7 @@
         <div class="row">
             <div class="col-md-12">
                 <label style="font-size: 20px;"><span style="color: red">*</span> Subject Name</label>
-                <input id="subject_name" type="text" name="subject_name"  class="form-control @error('subject_name') is-invalid @enderror" value="{{$subject->subject_name}}" onkeydown="return alphaOnly(event);" style="font-size: 18px;"  required>
+                <input id="subject_name" type="text" name="subject_name"  class="form-control @error('subject_name') is-invalid @enderror" value="{{$subject->subject_name}}" style="font-size: 18px;"  required>
                 <div class="invalid-feedback">
                     Please input valid subject name.
                 </div>

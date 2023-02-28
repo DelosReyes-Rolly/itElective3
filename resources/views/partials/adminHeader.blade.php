@@ -33,6 +33,7 @@
 
     <!-- title of site -->
     <title>OCSR</title>
+    <link rel="shortcut icon" type="image/icon" href='{{ URL::asset("img/ocsr.png")}}'/>
 
 </head>
 
@@ -64,32 +65,41 @@
 
             <ul class="list-unstyled components">
                 <div style="padding-left:8px;">
-                    <div class="Ashort">Privelege</div>
-                    <div class="Along">Admin Privelege</div>
+                    <div class="Ashort">Privilege</div>
+                    <div class="Along">Admin Privilege</div>
                 </div>
+                <li>
+                    <a href="#academicSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle" title="School Management Access">
+                    <i class="fas fa-school"></i>
+                        <span class="hide-word title-word">
+                            <b>
+                                <div class="Ashort">Maintain</div>
+                                <div class="Along">Maintenance</div>
+                            </b>
+                        </span>
+                    </a>
+                    <ul class="collapse list-unstyled" id="academicSubmenu">
+                        <li title="School years">
+                            <a href='{{ route("schoolYears") }}'><i class="fas fa-calendar-alt"></i>  <span class="hide-word"> <b>School years</b></span></a>
+                        </li>
+                        <li title="Semesters">
+                            <a href='{{ route("semesters") }}'><i class="fas fa-bars"></i>  <span class="hide-word"> <b>Semesters</b></span></a>
+                        </li>
+                        <li title="Courses">
+                            <a href='{{ route("courses") }}'><i class="fas fa-sitemap"></i> <span class="hide-word"> <b>Courses</b></span></a>
+                        </li>
+                        <li title="Subjects">
+                            <a href='{{ route("subjects") }}'><i class="fas fa-book"></i> <span class="hide-word"> <b>Subjects</b></span></a>
+                        </li>              
+                    </ul>
+                </li>
                 <li>
                     <a href='{{ route("create_faculty") }}' title="Faculties">
                         <i class="fas fa-user-tie"></i>
                         <span class="hide-word title-word"> <b>Faculty Accounts</b> </span>
                     </a>
-                    <a href='{{ route("courses") }}' title="Courses">
-                        <i class="fas fa-user-tie"></i>
-                        <span class="hide-word title-word"> <b>Courses</b> </span>
-                    </a>
-                    <a href='{{ route("subjects") }}' title="Subjects">
-                        <i class="fas fa-user-tie"></i>
-                        <span class="hide-word title-word"> <b>Subjects</b> </span>
-                    </a>
-                    <a href='{{ route("semesters") }}' title="Semester">
-                        <i class="fas fa-user-tie"></i>
-                        <span class="hide-word title-word"> <b>Semester</b> </span>
-                    </a>
-                    <a href='{{ route("schoolYears") }}' title="School Year">
-                        <i class="fas fa-user-tie"></i>
-                        <span class="hide-word title-word"> <b>School Year</b> </span>
-                    </a>
                     <a href='{{ route("schedule") }}' title="Schedule">
-                        <i class="fas fa-user-tie"></i>
+                        <i class="fas fa-chalkboard-teacher"></i>
                         <span class="hide-word title-word"> <b>Schedule</b> </span>
                     </a>
                 </li>
@@ -102,7 +112,7 @@
             <nav class="navbar navbar-expand-lg navbar-light sticky-top">
                 <div class="container-fluid">
 
-                    <button type="button" id="sidebarCollapse" class="btn btn-info">
+                    <button type="button" id="sidebarCollapse" class="btn btn-primary">
                         <i class="fas fa-align-left"></i>
                     </button>
                     <div style="padding-left:10px; color: #fff; font-weight:bold; font-style: Verdana;">Welcome {{Auth::user()->name}}!</div>

@@ -19,7 +19,7 @@
                             <img src='{{ URL::asset("img/ocsr.png")}}'><br/><br/>
                         </center>
                     </div>
-                    <div class="card-header" style="background-color: #1c8a43; color:white; text-align:center; border-radius:10px; font-weight:bold; font-family: arial black"> {{ isset($url) ? ucwords($url) : ""}} {{ __('Login') }}</div>
+                    <div class="card-header" style="background-color: #3A98B9; color:white; text-align:center; border-radius:10px; font-weight:bold; font-family: arial black"> {{ isset($url) ? ucwords($url) : ""}} {{ __('Login') }}</div>
                     <br><br>
                     <form method="POST" action="{{ route('login') }}">
                         @csrf

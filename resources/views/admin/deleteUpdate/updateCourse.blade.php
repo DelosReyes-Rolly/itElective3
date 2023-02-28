@@ -1,6 +1,6 @@
 <script src="{{ asset('assets/js/needs-validated.js') }}"></script>
 <div class="modal-header">
-    <h1 class="modal-title" id="staticBackdropLabel" style="font-size: 20px;">Update Strand</h1>
+    <h1 class="modal-title" id="staticBackdropLabel" style="font-size: 20px;">Update Course</h1>
     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
         <span aria-hidden="true">&times;</span>
     </button>
@@ -16,14 +16,14 @@
         <div class="row">
             <div class="col-md-12">
                 <label style="font-size: 20px;"><span style="color: red">*</span> Course Name</label>
-                <input id="course_name" type="text" name="course_name"  class="form-control @error('course_name') is-invalid @enderror" value="{{$course->course_name}}" onkeydown="return alphaOnly(event);" style="font-size: 18px;"  required>
+                <input id="course_name" type="text" name="course_name"  class="form-control @error('course_name') is-invalid @enderror" value="{{$course->course_name}}" style="font-size: 18px;"  required>
                 <div class="invalid-feedback">
                     Please input valid strand name.
                 </div>
             </div>
             <div class="col-md-12"><br/>
                 <label style="font-size: 20px;"><span style="color: red">*</span> Course description</label>
-                <input id="course_description" type="text" name="course_description"  class="form-control @error('course_description') is-invalid @enderror" value="{{$course->course_description}}" onkeydown="return alphaOnly(event);" style="font-size: 18px;" required>
+                <input id="course_description" type="text" name="course_description"  class="form-control @error('course_description') is-invalid @enderror" value="{{$course->course_description}}" style="font-size: 18px;" required>
                 <div class="invalid-feedback">
                     Please input valid course_description.
                 </div>

@@ -1,13 +1,15 @@
+@extends('layouts.app')
 @include('partials.loginHeader')
-<!DOCTYPE html>
-<html
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-
-        <!-- Fonts -->
-        <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
-        
-    </head>
-    
-</html>
+@section('content')
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css" />
+    <div class="loginchoice loginOthers">     
+		<div class="col-md-12 text-center">
+            <div class="box-form" style="background-color: #E8D5C4;">
+                <div class="right">
+                    <img src='{{ URL::asset("img/ocsr.png")}}'><br/><br/>
+                    <h1 style="font-weight: 900;font-size: 4vmax;">ONLINE COURSE REGISTRATION</h1><br/><br/>
+                </div>
+            </div>
+        </div>
+    </div>
+@endsection

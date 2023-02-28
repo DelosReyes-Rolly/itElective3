@@ -1,6 +1,6 @@
 <script src="{{ asset('assets/js/needs-validated.js') }}"></script>
 <div class="modal-header">
-    <h1 class="modal-title" id="staticBackdropLabel" style="font-size: 20px;">Update Strand</h1>
+    <h1 class="modal-title" id="staticBackdropLabel" style="font-size: 20px;">Update School year</h1>
     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
         <span aria-hidden="true">&times;</span>
     </button>
@@ -17,14 +17,14 @@
             <div class="col-md-12">
                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12"><br/>
 					<label for="year_from" class="form-label w-75"><span style="color: red">*</span>Year from: </label>
-					<input type="number" name="year_from" id="year_from" placeholder="from" class="form-control" required autofocus autocomplete="on" value="{{$schoolyear->year_from}}" >
+					<input type="number" name="year_from" id="year_from" placeholder="from" class="form-control" required autofocus autocomplete="on" value="{{$schoolyear->year_from}}"  min=2023 max=2999>
 					<div class="invalid-feedback">
 						Please input valid year.
 					</div>
 				</div>
                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12"><br/>
 					<label for="year_to" class="form-label w-75"><span style="color: red">*</span>Year to: </label>
-					<input type="number" name="year_to" id="year_to" placeholder="to" class="form-control" required autofocus autocomplete="on"value="{{$schoolyear->year_to}}" >
+					<input type="number" name="year_to" id="year_to" placeholder="to" class="form-control" required autofocus autocomplete="on"value="{{$schoolyear->year_to}}" min=2024 max=2999>
 					<div class="invalid-feedback">
 						Please input valid year.
 					</div>

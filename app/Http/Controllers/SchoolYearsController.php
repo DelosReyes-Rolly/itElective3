@@ -78,8 +78,8 @@ class SchoolYearsController extends Controller
      */
     public function updateschoolyear(Request $request){
         $request->validate([
-            'year_from' => 'required|max:255',
-            'year_to' => 'required|max:255',
+            'year_from' => 'required|numeric',
+            'year_to' => 'required|numeric',
         ]);
             $schoolyear = Schoolyears::find($request->id);
             $schoolyear->year_from = $request->year_from;

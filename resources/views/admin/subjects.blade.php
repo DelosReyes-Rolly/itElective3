@@ -8,7 +8,7 @@
 <section id="about" class="about">
 	<div id="main-content" class="blog-page">		
 		<hr class="mt-0 mb-4">
-        <div class="card mb-4 border-start-lg border-start-success" style="padding: 10px 20px 10px 20px;">
+        <div class="card mb-4 border-start-lg border-start-primary" style="padding: 10px 20px 10px 20px;">
 			<div class="card-header" style="background-color: #ffffff;">
 				<div style="float:right; text-align: right;">
 					<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#create_subject">
@@ -28,7 +28,7 @@
 				@else 
                     <div class="table-responsive table-billing-history">
                         <table id="firstDataTable" class="display table-bordered table-striped table-hover" style="width:100%">
-                            <thead style="background-color:#00cc00; color:#004d00;">
+                            <thead style="background-color:#b2dce4; color:black;">
                                 <tr>
                                     <th width="2%" class="border-gray-200" scope="col">#</th>
                                     <th width="20%" class="border-gray-200" scope="col">Subject Name</th>
@@ -77,12 +77,12 @@
 @endsection
 
 @section('modals')
-	<div class="modal fade modal-lg" id="create_subject" tabindex="-1" aria-labelledby="create_subject" aria-hidden="true">
-		<div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+	<div class="modal fade modal-lg modal-add h-100" id="create_subject" tabindex="-1" aria-labelledby="create_subject" aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-md">
 			<div class="modal-content border-start-lg border-start-yellow">
 				<div class="modal-header">
 					<h1 class="modal-title fs-5" id="exampleModalLabel">Create subject</h1>
-					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">&times;</button>
 				</div>
 				<form action="{{ route('store_subject') }}" method="POST" class="form my-4 needs-validation" novalidate>
 					<div class="modal-body">
@@ -90,21 +90,21 @@
 						@csrf
 						<div class="row">
 							<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-								<label for="subject_name" class="form-label w-75"><span class="form-text text-danger">* </span>Subject name: </label>
-								<input type="text" name="subject_name" id="subject_name" placeholder="Enter name" class="form-control" required autofocus autocomplete="on" onkeydown="return alphaOnly(event);">
+								<label for="subject_name" class="form-label w-75"><span style="color: red">*</span> Subject name: </label>
+								<input type="text" name="subject_name" id="subject_name" placeholder="Enter name" class="form-control" required autofocus autocomplete="on">
 								<div class="invalid-feedback">
 									Please input valid subject name.
 								</div>
 							</div>
 							<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12"><br/>
-								<label for="subject_description" class="form-label w-75"><span class="form-text text-danger">* </span>Subject description: </label>
-								<input type="text" name="subject_description" id="subject_description" placeholder="Enter description" class="form-control" required autofocus autocomplete="on" onkeydown="return alphaOnly(event);">
+								<label for="subject_description" class="form-label w-75"><span style="color: red">*</span> Subject description: </label>
+								<input type="text" name="subject_description" id="subject_description" placeholder="Enter description" class="form-control" required autofocus autocomplete="on">
 								<div class="invalid-feedback">
 									Please input valid description.
 								</div>
 							</div>
                             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12"><br/>
-								<label for="units" class="form-label w-75"><span class="form-text text-danger">* </span>Units: </label>
+								<label for="units" class="form-label w-75"><span style="color: red">*</span> Units: </label>
 								<input type="number" name="units" id="units" placeholder="Unit" class="form-control" required autofocus autocomplete="on">
 								<div class="invalid-feedback">
 									Please input valid units.
