@@ -2252,3 +2252,12 @@ button[type=submit]{       /*login button*/
   padding: 0.1rem 0 0 0;
   font-size: 1.2rem;
   }
+@media (min-width: 768px) {
+  .modal {
+    position: absolute;
+    float: left;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
