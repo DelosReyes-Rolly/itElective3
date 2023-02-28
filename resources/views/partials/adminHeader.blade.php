@@ -74,23 +74,23 @@
                         <span class="hide-word title-word"> <b>Faculty Accounts</b> </span>
                     </a>
                     <a href='{{ route("courses") }}' title="Courses">
-                        <i class="fas fa-user-tie"></i>
+                        <i class="fas fa-sitemap"></i>
                         <span class="hide-word title-word"> <b>Courses</b> </span>
                     </a>
                     <a href='{{ route("subjects") }}' title="Subjects">
-                        <i class="fas fa-user-tie"></i>
+                        <i class="fas fa-book"></i>
                         <span class="hide-word title-word"> <b>Subjects</b> </span>
                     </a>
                     <a href='{{ route("semesters") }}' title="Semester">
-                        <i class="fas fa-user-tie"></i>
+                        <i class="fas fa-bars"></i> 
                         <span class="hide-word title-word"> <b>Semester</b> </span>
                     </a>
                     <a href='{{ route("schoolYears") }}' title="School Year">
-                        <i class="fas fa-user-tie"></i>
+                        <i class="fas fa-calendar-alt"></i> 
                         <span class="hide-word title-word"> <b>School Year</b> </span>
                     </a>
                     <a href='{{ route("schedule") }}' title="Schedule">
-                        <i class="fas fa-user-tie"></i>
+                        <i class="fas fa-chalkboard-teacher"></i>
                         <span class="hide-word title-word"> <b>Schedule</b> </span>
                     </a>
                 </li>
