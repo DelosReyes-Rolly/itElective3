@@ -1,6 +1,6 @@
 @extends('layouts.app')
 @include('partials.adminHeader')
-
+@include('partials.dataTablesImport')
 @section('content')
 <div class="announcement_body">
 	<div class="announcement_text top-to-bottom">Manage Faculty Accounts</div>
@@ -11,30 +11,29 @@
 		<button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#create_faculty">
 			<i class="fa-solid fa-plus"></i> Create Faculty Accounts
 		</button>
-
-		<table class="table table-striped table-hover">
-			<thead>
-				<tr>
-					<th>
-						<th>Name</th>
-						<th>Email</th>
-						<th>Sex</th>
-						<th>Contact No.</th>
-						<th>Actions</th>
-					</th>
-				</tr>
-			</thead>
-			<tbody>
-				<tr>
-					<td colspan=6 class="text-center">
-						<span class="text-muted">
-							No Data To show Yet
-						</span>
-					</td>
-				</tr>
-			</tbody>
-		</table>
-	</div>
+		<br/><br/>
+		<hr class="mt-0 mb-4">
+        <div class="card mb-4 border-start-lg border-start-success" style="padding: 10px 20px 10px 20px;">
+            <div class="card-body p-0">
+                <div class="table-responsive table-billing-history">
+                    <table id="firstDataTable" class="display table-bordered table-striped table-hover" style="width:100%">
+                        <thead style="background-color:#00cc00; color:#004d00;">
+                            <tr>
+                                <th width="2%" class="border-gray-200" scope="col">#</th>
+                                <th width="20%" class="border-gray-200" scope="col">Name</th>
+                                <th width="20%" class="border-gray-200" scope="col">Email</th>
+								<th width="6%" class="border-gray-200" scope="col">Sex</th>
+								<th width="10%" class="border-gray-200" scope="col">Contact no.</th>
+								<th width="10%" class="border-gray-200" scope="col">Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
 </section>
 @endsection
 
@@ -53,7 +52,7 @@
 						<div class="row mb2">
 							<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
 								<label for="name" class="form-label w-75"><span class="form-text text-danger">* </span>Name: </label>
-								<input type="text" name="name" id="name" placeholder="Enter name" class="form-control" required autofocus autocomplete="on">
+								<input type="text" name="name" id="name" placeholder="Enter name" class="form-control" required autofocus autocomplete="on" onkeydown="return alphaOnly(event);">
 								<div class="invalid-feedback">
 									Please input valid name.
 								</div>
