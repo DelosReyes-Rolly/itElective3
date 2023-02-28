@@ -340,7 +340,7 @@ a.article:hover {
     font-size: 18px;
     border: none;
     outline: none;
-    background-color: rgb(18, 161, 61);
+    background-color: rgb(61, 18, 161);
     color: white;
     cursor: pointer;
     padding: 15px;
