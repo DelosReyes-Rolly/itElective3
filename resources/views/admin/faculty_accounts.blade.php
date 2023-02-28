@@ -57,7 +57,7 @@
 			<div class="modal-content border-start-lg border-start-yellow">
 				<div class="modal-header">
 					<h1 class="modal-title fs-5" id="exampleModalLabel">Create Faculty Account</h1>
-					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">&times;</button>
 				</div>
 				<form action="{{ route('store_faculty') }}" method="POST" class="form my-4 needs-validation" novalidate>
 					<div class="modal-body">
@@ -65,7 +65,7 @@
 						@csrf
 						<div class="row mb-2">
 							<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-								<label for="name" class="form-label w-75"><span class="form-text text-danger">* </span>Name: </label>
+								<label for="name" class="form-label w-75"><span style="color: red">*</span> Name: </label>
 								<input type="text" name="name" id="name" placeholder="Enter name" class="form-control" required autofocus autocomplete="on" onkeydown="return alphaOnly(event);">
 								<div class="invalid-feedback">
 									Please input valid name.
@@ -74,14 +74,14 @@
 						</div>
 						<div class="row mb-2">
 							<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-								<label for="email" class="form-label w-75"><span class="form-text text-danger">* </span>Email Address: </label>
+								<label for="email" class="form-label w-75"><span style="color: red">*</span> Email Address: </label>
 								<input type="email" name="email" id="email" placeholder="emailaddress@sample.com" class="form-control" required autofocus autocomplete="on">
 								<div class="invalid-feedback">	
 									Please input valid email address.
 								</div>
 							</div>
 							<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-								<label for="password" class="form-label w-75"><span class="form-text text-danger">* </span>Password</label>
+								<label for="password" class="form-label w-75"><span style="color: red">*</span> Password</label>
 								<div class="input-group">
 									<input type="password" name="password" id="password" placeholder="enter password" class="form-control" required autofocus autocomplete="on" readonly onclick="
 									$(document).ready(function(){
@@ -103,14 +103,14 @@
 						<div class="row mb-2">
 							<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
 								
-								<label for="house_number" class="form-label w-75"><span class="form-text text-danger">* </span>House No. </label>
+								<label for="house_number" class="form-label w-75"><span style="color: red">*</span> House No. </label>
 								<input type="text" name="house_number" id="house_number" placeholder="" class="form-control" required autofocus autocomplete="on">
 								<div class="invalid-feedback">	
 									Please input valid House No.
 								</div>
 							</div>
 							<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-								<label for="lot_number" class="form-label w-75"><span class="form-text text-danger">* </span>Lot No. </label>
+								<label for="lot_number" class="form-label w-75"><span style="color: red">*</span> Lot No. </label>
 								<input type="text" name="lot_number" id="lot_number" placeholder="" class="form-control" required autofocus autocomplete="on">
 								<div class="invalid-feedback">	
 									Please input valid Lot No.

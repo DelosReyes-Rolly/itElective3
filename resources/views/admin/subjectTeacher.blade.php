@@ -60,12 +60,12 @@
 
 
 @section('modals')
-	<div class="modal fade modal-lg" id="create_subjectteacher" tabindex="-1" aria-labelledby="create_subjectteacher" aria-hidden="true">
-		<div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg">
+	<div class="modal fade modal-lg modal-add" id="create_subjectteacher" tabindex="-1" aria-labelledby="create_subjectteacher" aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered modal-dialog-scrollable  modal-md">
 			<div class="modal-content border-start-lg border-start-yellow">
 				<div class="modal-header">
-					<h1 class="modal-title fs-5" id="exampleModalLabel">Create subjectteacher</h1>
-					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+					<h1 class="modal-title fs-5" id="exampleModalLabel">Create subject teacher</h1>
+					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">&times;</button>
 				</div>
 				<form action="{{ route('store_subjectteacher') }}" method="POST" class="form my-4 needs-validation" novalidate>
 					<div class="modal-body">
@@ -73,14 +73,14 @@
 						@csrf
 						<div class="row">
                             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12"><br/>
-								<label for="year_from" class="form-label w-75"><span class="form-text text-danger">* </span>Year from: </label>
+								<label for="year_from" class="form-label w-75"><span style="color: red">*</span> Year from: </label>
 								<input type="number" name="year_from" id="year_from" placeholder="from" class="form-control" required autofocus autocomplete="on">
 								<div class="invalid-feedback">
 									Please input valid year.
 								</div>
 							</div>
                             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12"><br/>
-								<label for="year_to" class="form-label w-75"><span class="form-text text-danger">* </span>Year to: </label>
+								<label for="year_to" class="form-label w-75"><span style="color: red">*</span> Year to: </label>
 								<input type="number" name="year_to" id="year_to" placeholder="to" class="form-control" required autofocus autocomplete="on">
 								<div class="invalid-feedback">
 									Please input valid year.

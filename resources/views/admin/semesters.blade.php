@@ -75,11 +75,11 @@
 
 @section('modals')
 	<div class="modal fade modal-lg modal-add" id="create_semester" tabindex="-1" aria-labelledby="create_semester" aria-hidden="true">
-		<div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg">
+		<div class="modal-dialog modal-dialog-centered modal-dialog-scrollable  modal-md">
 			<div class="modal-content border-start-lg border-start-yellow">
 				<div class="modal-header">
 					<h1 class="modal-title fs-5" id="exampleModalLabel">Create semester</h1>
-					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">&times;</button>
 				</div>
 				<form action="{{ route('store_semester') }}" method="POST" class="form my-4 needs-validation" novalidate>
 					<div class="modal-body">
@@ -87,7 +87,7 @@
 						@csrf
 						<div class="row">
 							<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-								<label for="semester_name" class="form-label w-75"><span class="form-text text-danger">* </span>Semester name: </label>
+								<label for="semester_name" class="form-label w-75"><span style="color: red">*</span> Semester name: </label>
 								<input type="text" name="semester_name" id="semester_name" placeholder="Enter name" class="form-control" required autofocus autocomplete="on" onkeydown="return alphaOnly(event);">
 								<div class="invalid-feedback">
 									Please input valid semester name.
