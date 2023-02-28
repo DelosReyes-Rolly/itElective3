@@ -105,7 +105,7 @@ class SubjectTeachersController extends Controller
                     }
                 }
             }
-
+            dd($units);
             if ($units > 10) {
                 return back()->with('message', 'Teacher reached the maximum units per week');
             }

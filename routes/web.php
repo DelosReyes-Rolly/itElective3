@@ -55,6 +55,8 @@ Route::group(['middleware' => 'prevent-back-history'],function(){
             Route::get('admin/faculties/faculty-accounts', 'create_faculty')->name('create_faculty');
             Route::post('admin/faculties/store-faculty', 'store_faculty')->name('store_faculty');
 
+            Route::put('/profile/{admin}', 'profileupdate');
+
         });
 
         Route::controller(CoursesController::class)->group(function(){

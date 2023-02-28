@@ -84,4 +84,13 @@ class AdminController extends Controller
             'data'=> User::all(),
         ]);
     }
+
+    public function profileupdate(Request $request, User $admin){
+        $validated = $request->validate([
+            'name' => 'required|regex:/^[\pL\s\-]+$/u|max:255',
+        ]);
+
+        $admin->update($validated);
+        return back()->with('success', 'Profile has been updated sucessfully!');
+    }
 }

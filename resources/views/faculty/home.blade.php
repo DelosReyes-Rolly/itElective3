@@ -22,6 +22,7 @@
 								<th width="6%" class="border-gray-200" scope="col">Semester</th>
 								<th width="10%" class="border-gray-200" scope="col">Time</th>
 								<th width="10%" class="border-gray-200" scope="col">Week day</th>
+                                <th width="20%" class="border-gray-200" scope="col">Unit</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -37,6 +38,7 @@
                                     <td width="20%">{{$subjectteacher->semester->semester_name}}</td>
                                     <td width="20%">{{$subjectteacher->time_from}} - {{$subjectteacher->time_to}}</td>
 									<td width="20%">{{$subjectteacher->days_of_week}}</td>
+									<td width="20%">{{$subjectteacher->subject->units}}</td>
                                 </tr>
                             @endforeach
                         </tbody>
