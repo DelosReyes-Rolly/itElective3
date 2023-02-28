@@ -17,11 +17,21 @@
 				</div>
             </div>
             <div class="card-body p-0">
-                @if ($message = Session::get('message'))
+				@if ($message = Session::get('message'))
                     <div class="alert alert-success alert-block">
                         <strong>{{ $message }}</strong>
                     </div>
                 @endif
+                @if (count($errors) > 0)
+					<div class="alert alert-danger">
+						<strong>Whoops!</strong> There were some problems with your input.
+						<ul>
+							@foreach ($errors->all() as $error)
+								<li>{{ $error }}</li>
+							@endforeach
+						</ul>
+					</div>
+				@endif
                 @if($semesters->count() == 0)
 					<br><br>
 					<div class="alert alert-danger"><em>No records found.</em></div>
