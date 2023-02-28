@@ -6,11 +6,6 @@
 		<div class="col-md-12 text-center">
             <div class="box-form" style="background-color: #E8D5C4;">
                 <div class="right">
-                    <div class="right-logo">
-                        <center>
-                            <img src='{{ URL::asset("img/ocsr.png")}}'><br/><br/>
-                        </center>
-                    </div>
                     <img src='{{ URL::asset("img/ocsr.png")}}'><br/><br/>
                     <h1 style="font-weight: 900;font-size: 4vmax;">ONLINE COURSE REGISTRATION</h1><br/><br/>
                 </div>
