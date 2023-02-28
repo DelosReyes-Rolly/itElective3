@@ -4,9 +4,11 @@ namespace App\Http\Controllers;
 
 use App\Models\User;
 use App\Models\Address;
+use App\Models\SubjectTeachers;
 use App\Models\Teacher;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;
 
 class FacultyController extends Controller
@@ -18,8 +20,9 @@ class FacultyController extends Controller
 
     public function index()
     {
-
-        return view('faculty.home');
+        $teacher_id = DB::table('users')->join('teachers', 'users.id', '=', 'teachers.user_id')->select(['teachers.id'])->first();
+        $subjectteachers = SubjectTeachers::where('deleted_at', '=', null)->where('teacher_id', '=', $teacher_id->id)->get();
+        return view('faculty.home', compact('subjectteachers'));
     }
 
     public function profile(){
@@ -57,16 +60,8 @@ class FacultyController extends Controller
     public function update_profile(Request $request) {
         $request->validate([
             'first_name'    => 'required',
-            'middle_name'   => 'required',
             'last_name'     => 'required',
-            'contact_no'    => 'required',
             'email'         => 'required',
-            'gender'        => 'required',
-            'street'        => 'required',
-            'barangay'      => 'required',
-            'city'          => 'required',
-            'zip_code'      => 'required',
-            'country'       => 'required',
         ]);
 
         $getAddressID = Teacher::where('user_id', Auth::user()->id)->value('address_id');

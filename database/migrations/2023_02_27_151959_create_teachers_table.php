@@ -24,7 +24,7 @@ class CreateTeachersTable extends Migration
             $table->string('last_name')->nullable();
             $table->string('suffix')->nullable();
             $table->string('email');
-            $table->integer('contact_no')->nullable();
+            $table->string('contact_no')->nullable();
             $table->string('sex')->nullable();
             $table->foreignId('address_id')
                         ->constrained()

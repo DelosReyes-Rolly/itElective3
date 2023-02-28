@@ -28,6 +28,13 @@
                     Please input valid subject description.
                 </div>
             </div>
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12"><br/>
+				<label for="units" class="form-label w-75"><span style="color: red">*</span> Units: </label>
+				<input type="number" name="units" id="units" placeholder="units" class="form-control" required autofocus autocomplete="on" value="{{$subject->units}}" min=1 max=10>
+				<div class="invalid-feedback">
+					Please input valid units.
+				</div>
+			</div>
         </div>
     </div>
     <div class="modal-footer">

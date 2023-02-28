@@ -17,6 +17,21 @@
 				</div>
             </div>
             <div class="card-body p-0">
+				@if ($message = Session::get('message'))
+                    <div class="alert alert-success alert-block">
+                        <strong>{{ $message }}</strong>
+                    </div>
+                @endif
+                @if (count($errors) > 0)
+					<div class="alert alert-danger">
+						<strong>Whoops!</strong> There were some problems with your input.
+						<ul>
+							@foreach ($errors->all() as $error)
+								<li>{{ $error }}</li>
+							@endforeach
+						</ul>
+					</div>
+				@endif
                 <div class="table-responsive table-billing-history">
                     <table id="firstDataTable" class="display table-bordered table-striped table-hover" style="width:100%">
                         <thead style="background-color:#b2dce4; color:black;">
@@ -24,23 +39,17 @@
                                 <th width="2%" class="border-gray-200" scope="col">#</th>
                                 <th width="20%" class="border-gray-200" scope="col">Name</th>
                                 <th width="20%" class="border-gray-200" scope="col">Email</th>
-								<th width="6%" class="border-gray-200" scope="col">Sex</th>
-								<th width="10%" class="border-gray-200" scope="col">Contact no.</th>
-								<th width="10%" class="border-gray-200" scope="col">Actions</th>
                             </tr>
                         </thead>
                         <tbody>
+							<?php 
+                                $i=1;
+                            ?>
                             @foreach ($data as $user)
 								<tr>
-									<td>{{$user->id}}</td>
+									<td width="2%" class="text-center"><?php echo $i++; ?></td>
 									<td>{{$user->name}}</td>
 									<td>{{$user->email}}</td>
-									<td>{{''}}</td>
-									<td>{{''}}</td>
-									<td>
-										<button type="button" title="view" class="btn btn-primary btn-sm"><i class="fa-regular fa-eye fa-sm"></i></button>
-										<button type="button" title="view" class="btn btn-danger btn-sm"><i class="fa-regular fa-trash-can fa-sm"></i></button>
-									</td>
 								</tr>
 							@endforeach
                         </tbody>
@@ -65,7 +74,7 @@
 						@csrf
 						<div class="row mb-2">
 							<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-								<label for="name" class="form-label w-75"><span style="color: red">*</span> Name: </label>
+								<label for="name" class="form-label w-75"><span style="color: red">*</span> First Name: </label>
 								<input type="text" name="name" id="name" placeholder="Enter name" class="form-control" required autofocus autocomplete="on" onkeydown="return alphaOnly(event);">
 								<div class="invalid-feedback">
 									Please input valid name.
@@ -99,24 +108,6 @@
 									</div>
 								</div>
 							</div>
-						</div>
-						<div class="row mb-2">
-							<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-								
-								<label for="house_number" class="form-label w-75"><span style="color: red">*</span> House No. </label>
-								<input type="text" name="house_number" id="house_number" placeholder="" class="form-control" required autofocus autocomplete="on">
-								<div class="invalid-feedback">	
-									Please input valid House No.
-								</div>
-							</div>
-							<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-								<label for="lot_number" class="form-label w-75"><span style="color: red">*</span> Lot No. </label>
-								<input type="text" name="lot_number" id="lot_number" placeholder="" class="form-control" required autofocus autocomplete="on">
-								<div class="invalid-feedback">	
-									Please input valid Lot No.
-								</div>
-							</div>
-							
 						</div>
 					</div>
 					<div class="modal-footer">

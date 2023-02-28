@@ -36,7 +36,7 @@ class AdminController extends Controller
     public function create_faculty()
     {
         return view('admin.faculty_accounts',[
-            'data'=> User::all(),
+            'data'=> User::where('id', '!=', 1)->get(),
         ]);
     }
 
@@ -83,5 +83,14 @@ class AdminController extends Controller
         return redirect()->route('create_faculty',[
             'data'=> User::all(),
         ]);
+    }
+
+    public function profileupdate(Request $request, User $admin){
+        $validated = $request->validate([
+            'name' => 'required|regex:/^[\pL\s\-]+$/u|max:255',
+        ]);
+
+        $admin->update($validated);
+        return back()->with('success', 'Profile has been updated sucessfully!');
     }
 }

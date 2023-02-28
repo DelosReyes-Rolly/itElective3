@@ -21,11 +21,11 @@ class SubjectTeachersController extends Controller
      */
     public function index()
     {
-        $teachers = Teacher::all();
-        $courses  = Courses::all();
-        $subjects = Subjects::all();
-        $semesters = Semesters::all();
-        $school_years = SchoolYears::all();
+        $teachers = Teacher::where('deleted_at', '=', null)->get();
+        $courses  = Courses::where('deleted_at', '=', null)->get();
+        $subjects = Subjects::where('deleted_at', '=', null)->get();
+        $semesters = Semesters::where('deleted_at', '=', null)->get();
+        $school_years = SchoolYears::where('deleted_at', '=', null)->get();
         $subjectteachers = Subjectteachers::where('deleted_at', '=', null)->get();
         return view('admin.subjectTeacher', compact(['subjectteachers', 'teachers', 'courses', 'subjects', 'semesters', 'school_years']));
     }
@@ -106,7 +106,7 @@ class SubjectTeachersController extends Controller
                     }
                 }
             }
-
+            dd($units);
             if ($units > 10) {
                 return back()->with('message', 'Teacher reached the maximum units per week');
             }

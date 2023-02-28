@@ -3,7 +3,7 @@
 @include('partials.dataTablesImport')
 @section('content')
 <div class="announcement_body">
-	<div class="announcement_text top-to-bottom">Manage School Year</div>
+	<div class="announcement_text top-to-bottom">Manage Schedule</div>
 </div>
 <section id="about" class="about">
 	<div id="main-content" class="blog-page">
@@ -17,21 +17,21 @@
 				</div>
             </div>
             <div class="card-body p-0">
-                @if ($message = Session::get('message'))
+				@if ($message = Session::get('message'))
                     <div class="alert alert-success alert-block">
                         <strong>{{ $message }}</strong>
                     </div>
                 @endif
                 @if (count($errors) > 0)
-							<div class="alert alert-danger">
-								<strong>Whoops!</strong> There were some problems with your input.
-								<ul>
-									@foreach ($errors->all() as $error)
-										<li>{{ $error }}</li>
-									@endforeach
-								</ul>
-							</div>
-						@endif
+					<div class="alert alert-danger">
+						<strong>Whoops!</strong> There were some problems with your input.
+						<ul>
+							@foreach ($errors->all() as $error)
+								<li>{{ $error }}</li>
+							@endforeach
+						</ul>
+					</div>
+				@endif
                 @if($subjectteachers->count() == 0)
 					<br><br>
 					<div class="alert alert-danger"><em>No records found.</em></div>
@@ -41,8 +41,14 @@
                             <thead style="background-color:#b2dce4; color:black;">
                                 <tr>
                                     <th width="2%" class="border-gray-200" scope="col">#</th>
-                                    <th width="20%" class="border-gray-200" scope="col">School Year</th>
-                                    <th width="10%" class="border-gray-200" scope="col">Actions</th>
+                                    <th width="20%" class="border-gray-200" scope="col">School year</th>
+									<th width="20%" class="border-gray-200" scope="col">Course</th>
+									<th width="20%" class="border-gray-200" scope="col">Subject</th>
+									<th width="6%" class="border-gray-200" scope="col">Semester</th>
+									<th width="10%" class="border-gray-200" scope="col">Time</th>
+									<th width="10%" class="border-gray-200" scope="col">Week day</th>
+									<th width="20%" class="border-gray-200" scope="col">Teacher</th>
+									<th width="20%" class="border-gray-200" scope="col">Unit</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -52,10 +58,14 @@
                                     @foreach ($subjectteachers as $subjectteacher)
                                         <tr id="subjectteacher{{$subjectteacher->id}}">
                                             <td width="2%" class="text-center"><?php echo $i++; ?></td>
-                                            <td width="40%"></td>
-                                            <td width="30%">
-
-                                            </td>
+                                            <td width="10%">{{$subjectteacher->schoolyear->year_from}} - {{$subjectteacher->schoolyear->year_to}}</td>
+											<td width="20%">{{$subjectteacher->course->course_name}}</td>
+											<td width="20%">{{$subjectteacher->subject->subject_name}}</td>
+											<td width="20%">{{$subjectteacher->semester->semester_name}}</td>
+											<td width="20%">{{$subjectteacher->time_from}} - {{$subjectteacher->time_to}}</td>
+											<td width="20%">{{$subjectteacher->days_of_week}}</td>
+											<td width="20%">{{$subjectteacher->teacher->first_name}}</td>
+											<td width="20%">{{$subjectteacher->subject->units}}</td>
                                         </tr>
 
                                     @endforeach
@@ -75,7 +85,7 @@
 			<div class="modal-content border-start-lg border-start-yellow">
 				<div class="modal-header">
 					<h1 class="modal-title fs-5" id="exampleModalLabel">Create Subject to Teacher Assignment</h1>
-					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">&times;</button>
 				</div>
 				<form action="{{ route('store_subjectteacher') }}" method="POST" class="form my-4 needs-validation" novalidate>
 					<div class="modal-body">
@@ -87,7 +97,7 @@
 								<select id="teacher_id" name="teacher_id"  class="@error('teacher_id') is-invalid @enderror" style="font-size: 16px; padding: 6px; width:100%;">
 									<option value="" hidden> Please Select a Teacher</option>
                                     @foreach ($teachers as $teacher)
-									    <option value="{{ $teacher->id }}">{{ strtoupper($teacher->last_name) }}, {{ $teacher->first_name }}</option>
+									    <option value="{{ $teacher->id }}">{{ $teacher->first_name }}</option>
                                     @endforeach
 								</select>
 							</div>

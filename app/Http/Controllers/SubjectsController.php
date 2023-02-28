@@ -28,7 +28,7 @@ class SubjectsController extends Controller
         $request->validate([
             'subject_name' => ['required', 'string', 'max:255'],
             'subject_description' => ['required', 'max:255'],
-            'units' => ['numeric', 'max:255'],
+            'units' => ['numeric', 'max:10'],
         ]);
         Subjects::create([
             'subject_name' => $request['subject_name'],
@@ -82,10 +82,13 @@ class SubjectsController extends Controller
         $request->validate([
             'subject_name' => 'required|max:255',
             'subject_description' => 'required|max:255',
+            'units' => 'required|numeric|max:10',
+
         ]);
             $subject = Subjects::find($request->id);
             $subject->subject_name = $request->subject_name;
             $subject->subject_description = $request->subject_description;
+            $subject->units = $request->units;
             $subject->save();
             return response()->json($subject);
 

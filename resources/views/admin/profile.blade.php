@@ -14,7 +14,7 @@
 								<div class="row">
 									<div class="col-md-3 border-right">
 									    <div class="d-flex flex-column align-items-center text-center p-3 py-5"><img class="rounded-circle mt-5" width="150px" src="{{ URL::asset('img/ocsr.png')}}"><br>
-									    	<span class="font-weight-bold"> {{Auth::user()->first_name}} {{Auth::user()->middle_name}} {{Auth::user()->last_name}} </span><span class="text-black-50"><br>Administrator</span><span> </span></div>
+									    	<span class="font-weight-bold"> {{Auth::user()->name}} </span><span class="text-black-50"><br>Administrator</span><span> </span></div>
 									</div>
 									<div class="col-md-5 border-right">
 									    <div class="p-3 py-5">
@@ -40,21 +40,9 @@
 									       	</div>
 									    <div class="row mt-2">
 									    	<div class="col-md-12" style="font-size: 20px;">
-												<label>First Name</label><input style="font-size: 18px;"  class="form-control @error('first_name') is-invalid @enderror" type="text" onkeydown="return alphaOnly(event);" name="first_name" class="form-control"  required maxlength="255" value="{{Auth::user()->first_name}}">
+												<label>First Name</label><input style="font-size: 18px;"  class="form-control @error('name') is-invalid @enderror" type="text" onkeydown="return alphaOnly(event);" name="name" class="form-control"  required maxlength="255" value="{{Auth::user()->name}}">
 												<div class="invalid-feedback">
 													Please input first name.
-												</div>
-											</div>
-									    	<div class="col-md-12" style="font-size: 20px;"><br/>
-												<label>Middle Name</label><input style="font-size: 18px;"  class="form-control @error('middle_name') is-invalid @enderror" type="text" onkeydown="return alphaOnly(event);" name="middle_name" class="form-control"  required maxlength="255" value="{{Auth::user()->middle_name}}">
-												<div class="invalid-feedback">
-													Please input middle name.
-												</div>
-											</div>
-									       	<div class="col-md-12" style="font-size: 20px;"><br/>
-												<label>Last Name</label><input style="font-size: 18px;"  class="form-control @error('last_name') is-invalid @enderror" type="text" onkeydown="return alphaOnly(event);" name="last_name" class="form-control" required maxlength="255" value="{{Auth::user()->last_name}}">
-												<div class="invalid-feedback">
-													Please input last name.
 												</div>
 											</div>
 									   	</div>
@@ -66,7 +54,6 @@
 									<div class="p-3 py-5">
 									    <div class="d-flex justify-content-between align-items-center experience"><span>Additional Info</span></div><br>
 									  	<div class="col-md-12" style="font-size: 20px;"><label class="labels">Email</label><input style="font-size: 18px;"  type="text" class="form-control" placeholder="{{Auth::user()->email}}"readonly></div> <br>
-									    <div class="col-md-12" style="font-size: 20px;"><label class="labels">Username</label><input style="font-size: 18px;"  type="text" class="form-control" placeholder="{{Auth::user()->username}}" readonly></div>
 									</div>
 								</div>
 						</div>

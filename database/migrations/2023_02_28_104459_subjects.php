@@ -17,7 +17,7 @@ class Subjects extends Migration
             $table->id();
             $table->string('subject_name');
             $table->string('subject_description');
-            $table->string('units');
+            $table->integer('units');
             $table->timestamps();
             $table->date('deleted_at')->nullable();
         });
