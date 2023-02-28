@@ -46,7 +46,7 @@
 					<h1 class="modal-title fs-5" id="exampleModalLabel">Create Faculty Accounts</h1>
 					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
 				</div>
-				<form action="{{ route('store_faculty') }}" method="POST" class="form my-4">
+				<form action="{{ route('store_faculty') }}" method="POST" class="form my-4 needs-validation" novalidate>
 					<div class="modal-body">
 						<span class="form-text text-danger"> * Required field </span>
 						@csrf
@@ -83,6 +83,8 @@
 					</div>
 				</form>
 			</div>
+			<!-- For validaition of forms -->
+			<script src="{{ asset('assets/js/needs-validated2.js') }}"></script>
 		</div>
 	</div>
 @endsection

@@ -2,13 +2,12 @@
 <html lang="en">
     <head>
 	
-		<!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous"> -->
         <!-- meta data -->
         <meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
+
         <!--font-family-->
 		<link rel="stylesheet" type="text/css"  href="{{ asset('assets/css/google-font-poppins.css') }}">
-		<!-- <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&amp;subset=devanagari,latin-ext" rel="stylesheet"> -->
         
         <!-- title of site -->
         <title>OCSR</title>
@@ -31,6 +30,7 @@
         <!--responsive.css-->
         <link rel="stylesheet" href="{{ asset('assets/css/responsive.css') }}">
 		<link rel="stylesheet" href="{{ asset('assets/css/fontawesome-5.6.3.css') }}"/>
+
 		<!-- transition -->
 		<script>
 			function reveal() {
@@ -102,7 +102,6 @@
 		<!--bootstrap.min.js-->
         <script src="{{ asset('assets/js/bootstrap.min.js') }}"></script>
 		<script src="{{ asset('assets/js/jquery-easing.js') }}"></script>
-		<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script> -->
 	     
         <!--Custom JS-->
         <script src="{{ asset('jquery.js') }}"></script>
