@@ -21,4 +21,24 @@ class SubjectTeachers extends Model
 
 
     protected $guarded = [];
+
+    public function teacher(){
+        return $this->belongsTo(Teacher::class);
+    }
+
+    public function semester(){
+        return $this->belongsTo(Semesters::class);
+    }
+
+    public function course(){
+        return $this->belongsTo(Courses::class);
+    }
+
+    public function subject(){
+        return $this->belongsTo(Subjects::class);
+    }
+
+    public function schoolyear(){
+        return $this->belongsTo(SchoolYears::class);
+    }
 }

@@ -41,8 +41,10 @@
                             <thead style="background-color:#b2dce4; color:black;">
                                 <tr>
                                     <th width="2%" class="border-gray-200" scope="col">#</th>
-                                    <th width="20%" class="border-gray-200" scope="col">School Year</th>
-                                    <th width="10%" class="border-gray-200" scope="col">Actions</th>
+                                    <th width="10%" class="border-gray-200" scope="col">School Year</th>
+									<th width="20%" class="border-gray-200" scope="col">Subject</th>
+									<th width="20%" class="border-gray-200" scope="col">Course</th>
+									<th width="20%" class="border-gray-200" scope="col">Teacher</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -52,10 +54,10 @@
                                     @foreach ($subjectteachers as $subjectteacher)
                                         <tr id="subjectteacher{{$subjectteacher->id}}">
                                             <td width="2%" class="text-center"><?php echo $i++; ?></td>
-                                            <td width="40%"></td>
-                                            <td width="30%">
-
-                                            </td>
+                                            <td width="10%">{{$subjectteacher->schoolyear->year_from}} - {{$subjectteacher->schoolyear->year_to}}</td>
+                                            <td width="20%">{{$subjectteacher->subject->subject_name}}</td>
+											<td width="20%">{{$subjectteacher->course->course_name}}</td>
+											<td width="20%">{{$subjectteacher->teacher->last_name}}, {{$subjectteacher->teacher->first_name}} {{$subjectteacher->teacher->middle_name}}</td>
                                         </tr>
 
                                     @endforeach
