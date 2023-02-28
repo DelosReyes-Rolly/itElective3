@@ -41,10 +41,14 @@
                             <thead style="background-color:#b2dce4; color:black;">
                                 <tr>
                                     <th width="2%" class="border-gray-200" scope="col">#</th>
-                                    <th width="10%" class="border-gray-200" scope="col">School Year</th>
-									<th width="20%" class="border-gray-200" scope="col">Subject</th>
+                                    <th width="20%" class="border-gray-200" scope="col">School year</th>
 									<th width="20%" class="border-gray-200" scope="col">Course</th>
+									<th width="20%" class="border-gray-200" scope="col">Subject</th>
+									<th width="6%" class="border-gray-200" scope="col">Semester</th>
+									<th width="10%" class="border-gray-200" scope="col">Time</th>
+									<th width="10%" class="border-gray-200" scope="col">Week day</th>
 									<th width="20%" class="border-gray-200" scope="col">Teacher</th>
+
                                 </tr>
                             </thead>
                             <tbody>
@@ -55,9 +59,13 @@
                                         <tr id="subjectteacher{{$subjectteacher->id}}">
                                             <td width="2%" class="text-center"><?php echo $i++; ?></td>
                                             <td width="10%">{{$subjectteacher->schoolyear->year_from}} - {{$subjectteacher->schoolyear->year_to}}</td>
-                                            <td width="20%">{{$subjectteacher->subject->subject_name}}</td>
 											<td width="20%">{{$subjectteacher->course->course_name}}</td>
-											<td width="20%">{{$subjectteacher->teacher->last_name}}, {{$subjectteacher->teacher->first_name}} {{$subjectteacher->teacher->middle_name}}</td>
+											<td width="20%">{{$subjectteacher->subject->subject_name}}</td>
+											<td width="20%">{{$subjectteacher->semester->semester_name}}</td>
+											<td width="20%">{{$subjectteacher->time_from}} - {{$subjectteacher->time_to}}</td>
+											<td width="20%">{{$subjectteacher->days_of_week}}</td>
+											<td width="20%">{{$subjectteacher->teacher->first_name}}</td>
+
                                         </tr>
 
                                     @endforeach
@@ -89,7 +97,7 @@
 								<select id="teacher_id" name="teacher_id"  class="@error('teacher_id') is-invalid @enderror" style="font-size: 16px; padding: 6px; width:100%;">
 									<option value="" hidden> Please Select a Teacher</option>
                                     @foreach ($teachers as $teacher)
-									    <option value="{{ $teacher->id }}">{{ strtoupper($teacher->last_name) }}, {{ $teacher->first_name }}</option>
+									    <option value="{{ $teacher->id }}">{{ $teacher->first_name }}</option>
                                     @endforeach
 								</select>
 							</div>
