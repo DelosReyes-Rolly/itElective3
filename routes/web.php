@@ -18,8 +18,8 @@ use App\Http\Controllers\SubjectTeachersController;
 |--------------------------------------------------------------------------
 |
 | Documentation
-| 
-| 
+|
+|
 |
 */
 
@@ -41,8 +41,8 @@ Route::group(['middleware' => 'prevent-back-history'],function(){
     |--------------------------------------------------------------------------
     |
     | Documentation
-    | 
-    | 
+    |
+    |
     |
     */
     Route::group(['middleware' => 'is_admin'], function () {
@@ -114,8 +114,8 @@ Route::group(['middleware' => 'prevent-back-history'],function(){
     |--------------------------------------------------------------------------
     |
     | Documentation
-    | 
-    | 
+    |
+    |
     |
     */
     Route::group(['middleware' => 'is_faculty'], function () {
@@ -124,6 +124,7 @@ Route::group(['middleware' => 'prevent-back-history'],function(){
 
             Route::get('/home', 'index')->name('home');
             Route::get('faculty/profile', 'profile')->name('faculty.profile');
+            Route::post('faculty/profile-update', 'update_profile')->name('faculty.update_profile');
 
         });
     });
