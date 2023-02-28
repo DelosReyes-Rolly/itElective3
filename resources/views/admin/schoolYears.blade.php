@@ -88,14 +88,14 @@
 						<div class="row">
                             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12"><br/>
 								<label for="year_from" class="form-label w-75"><span style="color: red">*</span> Year from: </label>
-								<input type="number" name="year_from" id="year_from" placeholder="from" class="form-control" required autofocus autocomplete="on">
+								<input type="number" name="year_from" id="year_from" placeholder="from" class="form-control" required autofocus autocomplete="on" min=2023 max=2999>
 								<div class="invalid-feedback">
 									Please input valid year.
 								</div>
 							</div>
                             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12"><br/>
 								<label for="year_to" class="form-label w-75"><span style="color: red">*</span> Year to: </label>
-								<input type="number" name="year_to" id="year_to" placeholder="to" class="form-control" required autofocus autocomplete="on">
+								<input type="number" name="year_to" id="year_to" placeholder="to" class="form-control" required autofocus autocomplete="on" min=2024 max=2999>
 								<div class="invalid-feedback">
 									Please input valid year.
 								</div>
