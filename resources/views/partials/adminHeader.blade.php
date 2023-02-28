@@ -33,6 +33,7 @@
 
     <!-- title of site -->
     <title>OCSR</title>
+    <link rel="shortcut icon" type="image/icon" href='{{ URL::asset("img/ocsr.png")}}'/>
 
 </head>
 
@@ -73,23 +74,23 @@
                         <span class="hide-word title-word"> <b>Faculty Accounts</b> </span>
                     </a>
                     <a href='{{ route("courses") }}' title="Courses">
-                        <i class="fas fa-user-tie"></i>
+                        <i class="fas fa-sitemap"></i>
                         <span class="hide-word title-word"> <b>Courses</b> </span>
                     </a>
                     <a href='{{ route("subjects") }}' title="Subjects">
-                        <i class="fas fa-user-tie"></i>
+                        <i class="fas fa-book"></i>
                         <span class="hide-word title-word"> <b>Subjects</b> </span>
                     </a>
                     <a href='{{ route("semesters") }}' title="Semester">
-                        <i class="fas fa-user-tie"></i>
+                        <i class="fas fa-bars"></i> 
                         <span class="hide-word title-word"> <b>Semester</b> </span>
                     </a>
                     <a href='{{ route("schoolYears") }}' title="School Year">
-                        <i class="fas fa-user-tie"></i>
+                        <i class="fas fa-calendar-alt"></i> 
                         <span class="hide-word title-word"> <b>School Year</b> </span>
                     </a>
                     <a href='{{ route("schedule") }}' title="Schedule">
-                        <i class="fas fa-user-tie"></i>
+                        <i class="fas fa-chalkboard-teacher"></i>
                         <span class="hide-word title-word"> <b>Schedule</b> </span>
                     </a>
                 </li>
@@ -102,7 +103,7 @@
             <nav class="navbar navbar-expand-lg navbar-light sticky-top">
                 <div class="container-fluid">
 
-                    <button type="button" id="sidebarCollapse" class="btn btn-info">
+                    <button type="button" id="sidebarCollapse" class="btn btn-primary">
                         <i class="fas fa-align-left"></i>
                     </button>
                     <div style="padding-left:10px; color: #fff; font-weight:bold; font-style: Verdana;">Welcome {{Auth::user()->name}}!</div>

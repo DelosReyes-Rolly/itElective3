@@ -3,6 +3,10 @@
 namespace App\Http\Controllers;
 
 use App\Models\Address;
+use App\Models\Courses;
+use App\Models\SchoolYears;
+use App\Models\Subjects;
+use App\Models\SubjectTeachers;
 use App\Models\Teacher;
 use App\Models\User;
 use Illuminate\Http\Request;
@@ -17,7 +21,12 @@ class AdminController extends Controller
 
     public function adminHome()
     {
-        return view('admin.adminHome');
+        $schoolyear = SchoolYears::where('deleted_at', '=', null)->count();
+        $schedules = SubjectTeachers::where('deleted_at', '=', null)->count();
+        $faculties = Teacher::where('deleted_at', '=', null)->count();
+        $courses = Courses::where('deleted_at', '=', null)->count();
+        $subjects = Subjects::where('deleted_at', '=', null)->count();
+        return view('admin.adminHome', compact('schoolyear', 'schedules', 'faculties', 'courses', 'subjects'));
     }
 
     public function profile(){
@@ -26,7 +35,9 @@ class AdminController extends Controller
 
     public function create_faculty()
     {
-        return view('admin.faculty_accounts');
+        return view('admin.faculty_accounts',[
+            'data'=> User::all(),
+        ]);
     }
 
     public function store_faculty(Request $request)
@@ -37,29 +48,33 @@ class AdminController extends Controller
             'password' => ['required','min:8','string'],
         ]);
 
-        User::create([
+        $user = User::create([
             'name'      => $request['name'],
             'email'     => $request['email'],
             'password'  => Hash::make($request['password']),
         ]);
+        $user->save();
 
-        $getUserID = User::where('email', $request->email)->value('id');
+        $getUserID = $user->id;
 
-        Address::create([
-            'house_number' => $getUserID,
-            'lot_number' => $getUserID,
-        ]);
+        $address = new Address();
+        $address->house_number = $request->input('house_number');
+        $address->lot_number = $request->input('lot_number');
+        $address->save();
 
-        $getAddressID = Address::where('house_number', $getUserID)->where('lot_number', $getUserID)->value('id');
+        $getAddressID = $address->id;
 
-        Teacher::create([
-            'user_id'    => $getUserID,
-            'email'      => $request->input('email'),
-            'address_id' => $getAddressID,
-        ]);
+        $teacher = new Teacher();
+        $teacher->user_id = $getUserID;
+        $teacher->email = $user->email;
+        $teacher->first_name = $user->name;
+        $teacher->address_id = $getAddressID;
+        $teacher->save();
+        //     'user_id'    => $getUserID,
+        //     'email'      => $request->input('email'),
+        //     'address_id' => $getAddressID,
+        // ]);
 
-        return redirect()->route('create_faculty',[
-            'data'=> User::all(),
-        ]);
+        return redirect()->route('create_faculty');
     }
 }
