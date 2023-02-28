@@ -404,3 +404,13 @@ a.article:hover {
   .card-hover:hover{
     box-shadow: none!important;
   }
+
+.dataTables_filter input { 
+    margin-top:20px; 
+    margin-bottom: 20px; 
+}
+
+.dataTables_length select { 
+    margin-top:20px; 
+    margin-bottom: 20px 
+};

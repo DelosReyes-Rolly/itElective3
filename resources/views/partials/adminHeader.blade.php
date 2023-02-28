@@ -2,30 +2,37 @@
 <html>
 
 <head>
-    <meta charset="utf-8">
+<meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-    {{-- Bootstrap --}}
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
-    
+    <!-- Bootstrap CSS CDN -->
+    <link rel="stylesheet" type="text/css"  href="{{ asset('assets/css/bootstrap-4.1.0-min.css') }}">
+  
     <!-- Our Custom CSS -->
-	<link rel="stylesheet" type="text/css" href="{{ asset('assets/css/style4.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}">
+	<link rel="stylesheet" type="text/css" href="{{ asset('assets/css/style4.css') }}">
+
+	<!-- sweetalert js -->
+    <script src="{{ asset('assets/js/sweetalert-new.js') }}"></script>
 
     <!-- Font Awesome JS -->
     <script src="{{ asset('assets/js/fontawesome-solid-5.0.13.js') }}"></script>
     <script src="{{ asset('assets/js/fontawesome-5.0.13.js') }}"></script>
 
-	<!-- additional css -->
+
+    <!-- jQuery CDN - Slim version (=without AJAX) -->
+    <script src="{{ asset('assets/js/jquery-slim.js') }}"></script>
+
+    <!-- Popper.JS -->
+    <script src="{{ asset('assets/js/popper.js') }}"></script>
+
+    <!-- Bootstrap JS -->
+    <script src="{{ asset('assets/js/bootstrap-4.1.0-min.js') }}"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"/>
 
-    <!-- sweetalert js -->
-    <script src="{{ asset('assets/js/sweetalert-new.js') }}"></script>
-    
-    <!-- title and image of site -->
-    <title>Online Course Subject Registration</title>
-    <link rel="shortcut icon" type="image/icon" href='{{ URL::asset("img/ocsr.png")}}'/>
+    <!-- title of site -->
+    <title>OCSR</title>
 
 </head>
 
@@ -52,38 +59,38 @@
                         <span class="hide-word title-word"> <b>Dashboard</b> </span>
                     </a>
                 </li>
-                <li>
-                    <a href="#academicSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle" title="School Management Access">
-                    <i class="fas fa-school"></i>
-                        <span class="hide-word title-word">
-                            <b>
-                                <div class="Ashort">Schedule</div>
-                                <div class="Along">Scheduling</div>
-                            </b>
-                        </span>
-                    </a>
-                    <ul class="collapse list-unstyled" id="academicSubmenu">
-                        <li title="School year">
-                            <a href='{{ url("/gradingschoolyear") }}'><i class="fas fa-calendar-alt"></i> <span class="hide-word"> <b>Week</b></span></a>
-                        </li>
-                        <li title="Grade Levels">
-                            <a href='{{ url("/gradinggradelevels") }}'><i class="fas fa-signal"></i> <span class="hide-word"> <b>Others</b></span></a>
-                        </li>
-                    </ul>
-                </li>
             </ul>
 
 
             <ul class="list-unstyled components">
-                <div style="padding-left:8px;">Admin Priveleges</div>
+                <div style="padding-left:8px;">
+                    <div class="Ashort">Privelege</div>
+                    <div class="Along">Admin Privelege</div>
+                </div>
                 <li>
-                    <a href='{{ url("/gradingfaculty") }}' title="Faculties">
-                        <i class="fas fa-user-tie"></i>
-                        <span class="hide-word title-word"> <b>Faculties</b> </span>
-                    </a>
                     <a href='{{ route("create_faculty") }}' title="Faculties">
                         <i class="fas fa-user-tie"></i>
                         <span class="hide-word title-word"> <b>Faculty Accounts</b> </span>
+                    </a>
+                    <a href='{{ route("courses") }}' title="Courses">
+                        <i class="fas fa-user-tie"></i>
+                        <span class="hide-word title-word"> <b>Courses</b> </span>
+                    </a>
+                    <a href='{{ route("subjects") }}' title="Subjects">
+                        <i class="fas fa-user-tie"></i>
+                        <span class="hide-word title-word"> <b>Subjects</b> </span>
+                    </a>
+                    <a href='{{ route("semesters") }}' title="Semester">
+                        <i class="fas fa-user-tie"></i>
+                        <span class="hide-word title-word"> <b>Semester</b> </span>
+                    </a>
+                    <a href='{{ route("schoolYears") }}' title="School Year">
+                        <i class="fas fa-user-tie"></i>
+                        <span class="hide-word title-word"> <b>School Year</b> </span>
+                    </a>
+                    <a href='{{ route("schedule") }}' title="Schedule">
+                        <i class="fas fa-user-tie"></i>
+                        <span class="hide-word title-word"> <b>Schedule</b> </span>
                     </a>
                 </li>
             </ul>

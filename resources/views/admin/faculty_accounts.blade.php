@@ -5,15 +5,17 @@
 <div class="announcement_body">
 	<div class="announcement_text top-to-bottom">Manage Faculty Accounts</div>
 </div>
-
 <section id="about" class="about">
 	<div id="main-content" class="blog-page">		
-		<button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#create_faculty">
-			<i class="fa-solid fa-plus"></i> Create Faculty Accounts
-		</button>
-		<br/><br/>
 		<hr class="mt-0 mb-4">
         <div class="card mb-4 border-start-lg border-start-success" style="padding: 10px 20px 10px 20px;">
+			<div class="card-header" style="background-color: #ffffff;">
+				<div style="float:right; text-align: right;">
+					<button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#create_faculty">
+						<i class="fa-solid fa-plus"></i> Create Faculty Accounts
+					</button>
+				</div>
+            </div>
             <div class="card-body p-0">
                 <div class="table-responsive table-billing-history">
                     <table id="firstDataTable" class="display table-bordered table-striped table-hover" style="width:100%">
@@ -40,7 +42,7 @@
 @section('modals')
 	<div class="modal fade modal-lg" id="create_faculty" tabindex="-1" aria-labelledby="create_faculty" aria-hidden="true">
 		<div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
-			<div class="modal-content">
+			<div class="modal-content border-start-lg border-start-yellow">
 				<div class="modal-header">
 					<h1 class="modal-title fs-5" id="exampleModalLabel">Create Faculty Account</h1>
 					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
