@@ -93,7 +93,7 @@
                                 <a class="header-letter" href='{{ url("faculty/profile") }}'>Profile</a>
                             </li>&emsp;
                             <li class="nav-item" title="Change Password">
-                                <a class="header-letter" href="{{ url('password-admin',['id'=>Auth::user()->id]) }}">Change Password</a>
+                                <a class="header-letter" href="{{ route('faculty.change_password',['id'=>Auth::user()->id]) }}">Change Password</a>
                             </li>&emsp;
                             <li class="nav-item" title="Logout">
                                 <a class="header-letter" href="{{ route('logout') }}"onclick="event.preventDefault();document.getElementById('logout-form').submit();">{{ __('Logout') }}</a>

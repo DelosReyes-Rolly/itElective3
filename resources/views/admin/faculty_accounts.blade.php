@@ -30,7 +30,19 @@
                             </tr>
                         </thead>
                         <tbody>
-                            
+                            @foreach ($data as $user)
+								<tr>
+									<td>{{$user->id}}</td>
+									<td>{{$user->name}}</td>
+									<td>{{$user->email}}</td>
+									<td>{{''}}</td>
+									<td>{{''}}</td>
+									<td>
+										<button type="button" title="view" class="btn btn-primary btn-sm"><i class="fa-regular fa-eye fa-sm"></i></button>
+										<button type="button" title="view" class="btn btn-danger btn-sm"><i class="fa-regular fa-trash-can fa-sm"></i></button>
+									</td>
+								</tr>
+							@endforeach
                         </tbody>
                     </table>
                 </div>
@@ -40,7 +52,7 @@
 @endsection
 
 @section('modals')
-	<div class="modal fade modal-lg" id="create_faculty" tabindex="-1" aria-labelledby="create_faculty" aria-hidden="true">
+	<div class="modal fade modal-lg h-100" id="create_faculty" tabindex="-1" aria-labelledby="create_faculty" aria-hidden="true">
 		<div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
 			<div class="modal-content border-start-lg border-start-yellow">
 				<div class="modal-header">
@@ -51,22 +63,24 @@
 					<div class="modal-body">
 						<span class="form-text text-danger"> * Required field </span>
 						@csrf
-						<div class="row mb2">
-							<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+						<div class="row mb-2">
+							<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
 								<label for="name" class="form-label w-75"><span class="form-text text-danger">* </span>Name: </label>
 								<input type="text" name="name" id="name" placeholder="Enter name" class="form-control" required autofocus autocomplete="on" onkeydown="return alphaOnly(event);">
 								<div class="invalid-feedback">
 									Please input valid name.
 								</div>
 							</div>
-							<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+						</div>
+						<div class="row mb-2">
+							<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
 								<label for="email" class="form-label w-75"><span class="form-text text-danger">* </span>Email Address: </label>
 								<input type="email" name="email" id="email" placeholder="emailaddress@sample.com" class="form-control" required autofocus autocomplete="on">
 								<div class="invalid-feedback">	
 									Please input valid email address.
 								</div>
 							</div>
-							<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+							<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
 								<label for="password" class="form-label w-75"><span class="form-text text-danger">* </span>Password</label>
 								<div class="input-group">
 									<input type="password" name="password" id="password" placeholder="enter password" class="form-control" required autofocus autocomplete="on" readonly onclick="
@@ -86,10 +100,28 @@
 								</div>
 							</div>
 						</div>
+						<div class="row mb-2">
+							<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+								
+								<label for="house_number" class="form-label w-75"><span class="form-text text-danger">* </span>House No. </label>
+								<input type="text" name="house_number" id="house_number" placeholder="" class="form-control" required autofocus autocomplete="on">
+								<div class="invalid-feedback">	
+									Please input valid House No.
+								</div>
+							</div>
+							<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+								<label for="lot_number" class="form-label w-75"><span class="form-text text-danger">* </span>Lot No. </label>
+								<input type="text" name="lot_number" id="lot_number" placeholder="" class="form-control" required autofocus autocomplete="on">
+								<div class="invalid-feedback">	
+									Please input valid Lot No.
+								</div>
+							</div>
+							
+						</div>
 					</div>
 					<div class="modal-footer">
 						<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-						<input type="submit" class="btn btn-primary btn-md" value=Submit></input>
+						<input type="submit" class="btn btn-primary btn-md" value=Submit>
 					</div>
 				</form>
 			</div>
