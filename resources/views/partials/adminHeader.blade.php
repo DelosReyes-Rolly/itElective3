@@ -65,8 +65,8 @@
 
             <ul class="list-unstyled components">
                 <div style="padding-left:8px;">
-                    <div class="Ashort">Privelege</div>
-                    <div class="Along">Admin Privelege</div>
+                    <div class="Ashort">Privilege</div>
+                    <div class="Along">Admin Privilege</div>
                 </div>
                 <li>
                     <a href="#academicSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle" title="School Management Access">

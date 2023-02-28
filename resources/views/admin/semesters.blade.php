@@ -88,7 +88,7 @@
 						<div class="row">
 							<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
 								<label for="semester_name" class="form-label w-75"><span style="color: red">*</span> Semester name: </label>
-								<input type="text" name="semester_name" id="semester_name" placeholder="Enter name" class="form-control" required autofocus autocomplete="on" onkeydown="return alphaOnly(event);">
+								<input type="text" name="semester_name" id="semester_name" placeholder="Enter name" class="form-control" required autofocus autocomplete="on">
 								<div class="invalid-feedback">
 									Please input valid semester name.
 								</div>
