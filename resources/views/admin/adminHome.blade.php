@@ -13,7 +13,7 @@
 						<h5 class="card-title" style="font-size:28px; color: #184624;">Years</h5>
 						<p class="card-text" style="font-size:40px;">&nbsp;<i class="fa-regular fa-calendar"> </i> 26</p>
 					</div>
-					<a href=""  style="background-color:#FFCCCC;">
+					<a href='{{ route("schoolYears") }}'  style="background-color:#FFCCCC;">
 						<div class="card-footer" style="text-align: right;">
 							<small style="color: #006600; font-size:20px;">View Years <i class="fa-solid fa-arrow-right"> </i></small>
 						</div>
@@ -26,14 +26,14 @@
 						<h5 class="card-title" style="font-size:28px; color: #184624;">Schedules</h5>
 						<p class="card-text" style="font-size:40px;">&nbsp;<i class="fa-solid fa-school-flag"> </i> 88</p>
 					</div>
-					<a href=""  style="background-color:#FFE5CC;">
+					<a href='{{ route("schedule") }}'  style="background-color:#FFE5CC;">
 						<div class="card-footer" style="text-align: right;">
 							<small style="color: #006600; font-size:20px;">View Schedules <i class="fa-solid fa-arrow-right"> </i></small>
 						</div>
 					</a>
 				</div>
 			</div>
-			<div class="col-lg-4 col-md-6 col-sm-12">
+			<!-- <div class="col-lg-4 col-md-6 col-sm-12">
 				<div class="card card-hover">
 					<div class="card-body" style="background-color: #FFFF66;">
 						<h5 class="card-title" style="font-size:28px; color: #184624;">Weeks</h5>
@@ -45,7 +45,7 @@
 						</div>
 					</a>
 				</div>
-			</div>
+			</div> -->
 			<div class="col-lg-4 col-md-6 col-sm-12">
 				<div class="card card-hover">
 					<div class="card-body" style="background-color: #B2FF66;">
@@ -65,7 +65,7 @@
 						<h5 class="card-title" style="font-size:28px; color: #184624;">Courses</h5>
 						<p class="card-text" style="font-size:40px;">&nbsp;<i class="fa-solid fa-calendar-days"> </i> 8</p>
 					</div>
-					<a href=""  style="background-color:#CCE5FF;">
+					<a href='{{ route("courses") }}'  style="background-color:#CCE5FF;">
 						<div class="card-footer" style="text-align: right;">
 							<small style="color: #006600; font-size:20px;">View Courses <i class="fa-solid fa-arrow-right"> </i></small>
 						</div>
@@ -78,9 +78,9 @@
 						<h5 class="card-title" style="font-size:28px; color: #184624;">Subejcts</h5>
 						<p class="card-text" style="font-size:40px;">&nbsp;<i class="fa-solid fa-book"> </i> 12</p>
 					</div>
-					<a href=""  style="background-color:#CCCCFF;">
+					<a href='{{ route("subjects") }}'  style="background-color:#CCCCFF;">
 						<div class="card-footer" style="text-align: right;">
-							<small style="color: #006600; font-size:20px;">View <i class="fa-solid fa-arrow-right"> </i></small>
+							<small style="color: #006600; font-size:20px;">View Subjects <i class="fa-solid fa-arrow-right"> </i></small>
 						</div>
 					</a>
 				</div>
