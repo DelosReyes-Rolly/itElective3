@@ -20,7 +20,7 @@ class CreateAdminsTable extends Migration
                     ->onUpdate('cascade')
                     ->onDelete('cascade');
             $table->string('first_name');
-            $table->string('middle_name');
+            $table->string('middle_name')->nullable();
             $table->string('last_name');
             $table->string('suffix')->nullable();
             $table->string('email');

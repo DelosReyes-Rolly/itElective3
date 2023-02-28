@@ -17,6 +17,7 @@ class FacultyController extends Controller
 
     public function index()
     {
+
         return view('faculty.home');
     }
 
@@ -69,4 +70,5 @@ class FacultyController extends Controller
 
         return back()->with('success', 'Profile Successfully Updated');
     }
+
 }

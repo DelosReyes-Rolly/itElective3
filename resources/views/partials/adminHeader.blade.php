@@ -81,7 +81,7 @@
                         <i class="fas fa-user-tie"></i>
                         <span class="hide-word title-word"> <b>Faculties</b> </span>
                     </a>
-                    <a href='{{ route('create_faculty') }}' title="Faculties">
+                    <a href='{{ route("create_faculty") }}' title="Faculties">
                         <i class="fas fa-user-tie"></i>
                         <span class="hide-word title-word"> <b>Faculty Accounts</b> </span>
                     </a>
